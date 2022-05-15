@@ -1,0 +1,6 @@
+[wsl2]
+processors = 2
+memory = 2GB
+swap = 2GB
+nestedVirtualization = false
+guiApplications = false
