@@ -5,7 +5,7 @@ GRUB_DEFAULT="1>2"
 GRUB_TIMEOUT=15
 GRUB_DISTRIBUTOR="Arch"
 GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet"
-GRUB_CMDLINE_LINUX="nmi_watchdog=0 nowatchdog fsck.mode=skip msr.allow_writes=on"
+GRUB_CMDLINE_LINUX="nmi_watchdog=0 nowatchdog fsck.mode=skip msr.allow_writes=on mitigations=off"
 
 # Preload both GPT and MBR modules so that they are not missed
 GRUB_PRELOAD_MODULES="part_gpt part_msdos"

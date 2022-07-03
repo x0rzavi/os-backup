@@ -1,0 +1,8 @@
+[Unit]
+Description=Timer for the nbfc_service service
+
+[Timer]
+OnBootSec=1min
+
+[Install]
+WantedBy=timers.target

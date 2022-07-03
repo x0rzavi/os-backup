@@ -1,0 +1,13 @@
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <pass>
+# /dev/sda5 LABEL=Linux
+UUID=048e4d94-c07c-44e7-923c-60e74492546a	/         	btrfs     	rw,noatime,compress-force=zstd:3,space_cache=v2,autodefrag,subvolid=256,subvol=/@	0 0
+
+# /dev/sda1 LABEL=SYSTEM
+UUID=E095-9D42      	/efi      	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
+
+# /dev/sda5 LABEL=Linux
+UUID=048e4d94-c07c-44e7-923c-60e74492546a	/home     	btrfs     	rw,noatime,compress-force=zstd:3,space_cache=v2,autodefrag,subvolid=257,subvol=/@home	0 0
+
