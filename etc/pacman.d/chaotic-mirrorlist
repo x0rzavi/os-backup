@@ -39,21 +39,21 @@ Server = https://fr-mirror.chaotic.cx/$repo/$arch
 
 # Bulgaria
 # * By: Sudo Man <github.com/sakrayaami>
-#Server = https://bg-mirror.chaotic.cx/$repo/$arch
+Server = https://bg-mirror.chaotic.cx/$repo/$arch
 
 # Toronto, Canada
 # * By freebird54
-#Server = https://ca-mirror.chaotic.cx/$repo/$arch
+Server = https://ca-mirror.chaotic.cx/$repo/$arch
+
+# Singapore
+# * By: freediff.org
+Server = https://sg-mirror.chaotic.cx/$repo/$arch
 
 # India
 # * By Naman (Kaithal)
 #Server = https://in-mirror.chaotic.cx/$repo/$arch
 # * By Albony <t.me/shrirangkahale>
 #Server = https://in-2-mirror.chaotic.cx/$repo/$arch
-
-# Singapore
-# * By: freediff.org
-#Server = https://sg-mirror.chaotic.cx/$repo/$arch
 
 # IPFS mirror - for instructions on how to use it consult the projects repo (https://github.com/RubenKelevra/pacman.store)
 # * By: RubenKelevra / pacman.store
