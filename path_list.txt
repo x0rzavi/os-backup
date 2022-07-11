@@ -26,6 +26,7 @@
 /etc/pam.d/passwd
 /etc/paru.conf
 /etc/rc.conf
+/etc/sanoid/sanoid.conf
 /etc/ssh/sshd_config
 /etc/sudoers.d/00_wheel
 /etc/sudoers.d/01_feedback
