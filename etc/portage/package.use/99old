@@ -1,0 +1,66 @@
+# build sys-kernel/gentoo-sources with experimental use flags to add genpatches
+sys-kernel/gentoo-sources experimental
+
+# build net-misc/networkmanager with iwd flag to enable iwd support
+net-misc/networkmanager iwd
+
+# build gui-apps/waybar with network, tray and wifi flags for additional features
+gui-apps/waybar network tray wifi 
+
+# build gui-wm/sway with tray and wallpapers flag to add default wallpapers and
+# disable swaylock flag in favor of gui-apps/swaylock-effects
+gui-wm/sway tray wallpapers -swaylock
+
+# build app-arch/p7zip without wxwidgets flag to avoid 7zG
+app-arch/p7zip -wxwidgets
+
+# build www-client/firefox with geckodriver and hwaccel flags to add features
+www-client/firefox geckodriver hwaccel
+
+# build sys-devel/gcc with lto, graphite and pgo flags for better optimization
+# and also with zstd flag
+sys-devel/gcc lto graphite pgo zstd
+
+# build app-emulation/qemu with spice, virgl, virtfs, zstd, smartcard and usbredir
+# flags for added features and disable doc flag
+app-emulation/qemu spice virgl virtfs zstd smartcard usbredir -doc
+
+# build app-emulation/spice with smartcard flag to add features in sync with app-emulation/qemu
+app-emulation/spice smartcard
+
+# build net-misc/spice-gtk with smartcard and usbredir flags to add features in sync 
+# with app-emulation/qemu
+net-misc/spice-gtk smartcard usbredir
+
+# build gnome-base/gvfs with mtp and archive flag for mtp and archive support
+gnome-base/gvfs mtp archive
+
+# build app-containers/podman with btrfs flags to add support for btrfs graph driver
+app-containers/podman btrfs
+
+# build app-containers/docker with btrfs & overlay flags to add support for btrfs & overlay
+# graph driver
+app-containers/docker btrfs overlay
+
+# build app-containers/containerd with btrfs flags to add support for btrfs graph driver
+app-containers/containerd btrfs 
+
+# exclude lto flag for net-libs/nodejs-16.13.1 for now since LTO builds of nodejs using
+# gcc-11+ currently fail tests and produce runtime errors
+=net-libs/nodejs-16.13.1 -lto
+
+# build byobu and dependencies with additional python3_9 flag till it supports python3_10
+app-misc/byobu python_single_target_python3_9
+# required by app-misc/byobu-5.133::gentoo[python_single_target_python3_9]
+# required by byobu (argument)
+dev-libs/newt python_targets_python3_9 
+
+# build nohang with additional python3_9 flag till it supports python3_10
+sys-process/nohang python_targets_python3_9
+
+# build media-libs/freeimage with raw and webp for additional features
+media-libs/freeimage raw webp
+
+# build media-gfx/graphicsmagick with dynamic-loading and imagemagick flags for 
+# additional features
+media-gfx/graphicsmagick dynamic-loading imagemagick
