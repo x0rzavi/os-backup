@@ -148,3 +148,17 @@ Enable: [CONFIG_ACPI_EC_DEBUGFS] EC read/write access through /sys/kernel/debug/
 
 [ZENPOWER]
 Disable: [CONFIG_SENSORS_K10TEMP] AMD Family 10h+ temperature sensor [M]
+
+[PODMAN/DOCKER] [https://github.com/moby/moby/raw/master/contrib/check-config.sh]
+Enable: [CONFIG_TUN] Universal TUN/TAP device driver support [M]
+Enable: [CONFIG_BRIDGE] 802.1d Ethernet Bridging [M]
+Enable: [CONFIG_VLAN_8021Q] 802.1Q/802.1ad VLAN Support [M]
+Enable: [CONFIG_BRIDGE_VLAN_FILTERING] VLAN filtering
+Enable: [CONFIG_FUSE_FS] FUSE (Filesystem in Userspace) support
+Enable: [CONFIG_OVERLAY_FS] Overlay filesystem support
+Enable: [CONFIG_MEMCG] Memory controller
+Enable: [CONFIG_VETH] Virtual ethernet pair device [M]
+Enable: [CONFIG_BRIDGE_NETFILTER] Bridged IP/ARP packets filtering
+Enable: [CONFIG_IP_VS] IP virtual server support [M]
+Enable: [CONFIG_NETFILTER_XT_MATCH_IPVS] "ipvs" match support [M]
+Enable: [CONFIG_NETFILTER_XT_MATCH_COMMENT] "comment" match support [M]

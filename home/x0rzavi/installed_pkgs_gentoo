@@ -4,6 +4,9 @@ app-admin/chezmoi
 app-admin/sudo
 app-admin/sysklogd
 app-arch/p7zip
+app-containers/distrobox
+app-containers/netavark
+app-containers/podman
 app-crypt/seahorse
 app-editors/micro
 app-editors/vscode
