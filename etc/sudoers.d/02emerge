@@ -1,0 +1,1 @@
+x0rzavi ALL=(ALL) NOPASSWD: /usr/bin/emerge, /usr/sbin/emaint, /usr/bin/emlop

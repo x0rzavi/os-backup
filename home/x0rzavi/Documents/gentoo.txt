@@ -1,0 +1,150 @@
+zpool import -d /dev/disk/by-id/ata-TOSHIBA_MQ04ABF100_60KBP9C2T-part5 -N -R /mnt/gentoo zroot
+zfs mount zroot/root/gentoo
+zfs mount -a
+zfs mount
+mount /dev/sda1 /mnt/gentoo/efi
+mount --bind /mnt/gentoo/efi/EFI/Gentoo /mnt/gentoo/boot
+cp --dereference /etc/resolv.conf /mnt/gentoo/etc/
+mount --types proc /proc /mnt/gentoo/proc 
+mount --rbind /sys /mnt/gentoo/sys 
+mount --rbind /dev /mnt/gentoo/dev 
+mount --bind /run /mnt/gentoo/run
+chroot /mnt/gentoo /bin/bash 
+source /etc/profile
+export PS1="(chroot) ${PS1}"
+
+exit
+umount -l /mnt/gentoo/dev{/shm,/pts,}
+umount /mnt/gentoo/efi
+umount /mnt/gentoo/boot
+zfs unmount -a
+umount /mnt/gentoo/proc
+umount /mnt/gentoo/run
+umount -l /mnt/gentoo/sys/fs/cgroup
+umount -l /mnt/gentoo/sys/kernel/debug
+umount -R /mnt/gentoo/sys
+zfs unmount zroot/root/gentoo
+zpool export zroot
+
+[BASE]
+Change: [CONFIG_KERNEL_ZSTD] Kernel compression mode (ZSTD)
+Enable: [CONFIG_IKCONFIG] Kernel .config support
+Enable: [CONFIG_IKCONFIG_PROC] Enable access to .config through /proc/config.gz
+Disable: [CONFIG_X86_EXTENDED_PLATFORM] Support for extended (non-PC) x86 platforms
+Enable: [CONFIG_X86_AMD_PLATFORM_DEVICE] AMD ACPI2Platform devices support
+Change: [CONFIG_MZEN] Processor family (AMD Zen)
+Disable: [CONFIG_X86_MCE_INTEL] Intel MCE features
+Disable: [CONFIG_MICROCODE_INTEL] Intel microcode loading support
+Enable: [CONFIG_AMD_MEM_ENCRYPT] AMD Secure Memory Encryption (SME) support
+Enable: [CONFIG_ACPI_TAD] ACPI Time and Alarm (TAD) Device Support [M]
+Change: [CONFIG_CPU_FREQ_DEFAULT_GOV_PERFORMANCE] Default CPUFreq governor (performance)
+Enable: [CONFIG_X86_AMD_PSTATE] AMD Processor P-State driver
+Enable: [CONFIG_PARTITION_ADVANCED] Advanced partition selection
+Enable: [CONFIG_MSDOS_PARTITION] PC BIOS (MSDOS partition tables) support
+Enable: [CONFIG_EFI_PARTITION] EFI GUID Partition support
+Disable: [CONFIG_PCCARD] PCCard (PCMCIA/CardBus) support
+Disable: [CONFIG_MACINTOSH_DRIVERS] Macintosh device drivers
+Disable: [CONFIG_INPUT_JOYSTICK] Joysticks/Gamepads
+Disable: [CONFIG_INPUT_TABLET] Tablets
+Disable: [CONFIG_INPUT_TOUCHSCREEN] Touchscreens 
+Disable: [CONFIG_INPUT_MISC] Miscellaneous devices
+Enable: [CONFIG_SENSORS_K10TEMP] AMD Family 10h+ temperature sensor [M]
+Change: [CONFIG_IOMMU_DEFAULT_PASSTHROUGH] IOMMU default domain type (Passthrough)
+Enable: [CONFIG_CRYPTO_DEFLATE] Deflate compression algorithm
+Enable: [CONFIG_GENTOO_KERNEL_SELF_PROTECTION] Kernel Self Protection Project
+
+[FS]
+Change: [CONFIG_EXT4_FS] The Extended 4 (ext4) filesystem [M]
+Enable: [CONFIG_EXFAT_FS] exFAT filesystem support [M]
+Enable: [CONFIG_NTFS3_FS] NTFS Read-Write file system support [M]
+Enable: [CONFIG_NTFS3_LZX_XPRESS] activate support of external compressions lzx/xpress
+
+[DISPLAY/AUDIO]
+Enable: [CONFIG_ACPI_VIDEO] ACPI Video [M]
+Enable: [CONFIG_DRM_AMDGPU] AMD GPU [M]
+Enable: [CONFIG_DRM_AMD_ACP] Enable AMD Audio CoProcessor IP support
+Enable: [CONFIG_HSA_AMD] HSA kernel driver for AMD GPU devices
+Disable: [CONFIG_DRM_I915] Intel 8xx/9xx/G3x/G4x/HD Graphics
+Disable: [CONFIG_DRM_VIRTIO_GPU] Virtio GPU driver
+Enable: [CONFIG_FB] Support for frame buffer devices
+Enable: [CONFIG_FB_EFI] EFI-based Framebuffer Support
+Enable: [CONFIG_SND_HDA_CODEC_REALTEK] Build Realtek HD-audio codec support 
+Enable: [CONFIG_SND_HDA_CODEC_HDMI] Build HDMI/DisplayPort HD-audio codec support
+Disable: [CONFIG_SND_USB] USB sound devices
+
+[NETWORK]
+Enable: [CONFIG_R8169] Realtek 8169/8168/8101/8125 ethernet support [ONLY][M]
+Enable: [CONFIG_USB_USBNET] Multi-purpose USB Networking Framework [ONLY][M]
+Enable: [CONFIG_USB_NET_RNDIS_HOST] Host for RNDIS and ActiveSync devices [ONLY][M]
+Enable: [CONFIG_MT7601U] MediaTek MT7601U (USB) support [ONLY][M]
+Enable: [CONFIG_RTW88_8821CE] Realtek 8821CE PCI wireless network adapter [ONLY][M]
+
+[WIREGUARD]
+Enable: [CONFIG_WIREGUARD] WireGuard secure network tunnel [M]
+Enable: [CONFIG_CRYPTO_ECDSA] ECDSA (NIST P192, P256 etc.) algorithm [M]
+
+[NFTABLES]
+Enable: [CONFIG_NETFILTER_ADVANCED] Advanced netfilter configuration
+Enable: [CONFIG_NF_CONNTRACK_MARK] Connection mark tracking support
+Enable: [CONFIG_NF_TABLES] Netfilter nf_tables support [M]
+Enable: [CONFIG_NF_TABLES_INET] Netfilter nf_tables mixed IPv4/IPv6 tables support
+Enable: [CONFIG_NF_TABLES_NETDEV] Netfilter nf_tables netdev tables support
+Enable: [CONFIG_NFT_CT] Netfilter nf_tables conntrack module [M]
+Enable: [CONFIG_NFT_FIB_INET] Netfilter nf_tables fib inet support
+Enable: [CONFIG_NFT_LOG] Netfilter nf_tables log module [M]
+Enable: [CONFIG_NFT_MASQ] Netfilter nf_tables masquerade support [M]
+Enable: [CONFIG_NFT_REDIR] Netfilter nf_tables redirect support [M]
+Enable: [CONFIG_NFT_NAT] Netfilter nf_tables nat module [M]
+Enable: [CONFIG_NF_TABLES_IPV4] IPv4 nf_tables support
+Enable: [CONFIG_NFT_FIB_IPV4] nf_tables fib / ip route lookup support [M]
+Enable: [CONFIG_NF_TABLES_IPV6] IPv6 nf_tables support
+Enable: [CONFIG_NFT_FIB_IPV6] nf_tables fib / ipv6 route lookup support [M]
+Enable: [CONFIG_IPV6_MULTIPLE_TABLES] IPv6: Multiple Routing Tables
+
+[KEYBOARD]
+Enable: [CONFIG_ACPI_WMI] WMI [M]
+Enable: [CONFIG_HP_WMI] HP WMI extras [M]
+Enable: [CONFIG_WIRELESS_HOTKEY] Wireless hotkey button [M]
+
+[TOUCHPAD]
+Disable: [CONFIG_I2C_I801] Intel 82801 (ICH/PCH)
+Enable: [CONFIG_I2C_PIIX4] Intel PIIX4 and compatible (ATI/AMD/Serverworks/Broadcom/SMSC) [M]
+Enable: [CONFIG_I2C_DESIGNWARE_SLAVE] Synopsis Designware Slave
+Enable: [CONFIG_I2C_DESIGNWARE_PLATFORM] Synopsis Designware Platform [M]
+Enable: [CONFIG_PINCTRL_AMD] AMD GPIO pin control
+Enable: [CONFIG_HID_MULTITOUCH] HID Multitouch panels [ONLY][M]
+Enable: [CONFIG_I2C_HID_ACPI] HID over I2C transport layer ACPI driver [M]
+
+[IWD]
+Enable: [CONFIG_KEY_DH_OPERATIONS] Diffie-Hellman operations on retained keys
+Enable: [CONFIG_CRYPTO_ECB] ECB support 
+Enable: [CONFIG_CRYPTO_MD4] MD4 digest algorithm
+Enable: [CONFIG_CRYPTO_SHA1] SHA1 digest algorithm
+Enable: [CONFIG_CRYPTO_SHA1_SSSE3] SHA1 digest algorithm (SSSE3/AVX/AVX2/SHA-NI) 
+Enable: [CONFIG_CRYPTO_SHA256_SSSE3] SHA256 digest algorithm (SSSE3/AVX/AVX2/SHA-NI)
+Enable: [CONFIG_CRYPTO_SHA512_SSSE3] SHA512 digest algorithm (SSSE3/AVX/AVX2)
+Enable: [CONFIG_CRYPTO_AES_NI_INTEL] AES cipher algorithms (AES-NI)
+Enable: [CONFIG_CRYPTO_ARC4] ARC4 cipher algorithm
+Enable: [CONFIG_CRYPTO_DES] DES and Triple DES EDE cipher algorithms
+Enable: [CONFIG_CRYPTO_DES3_EDE_X86_64] Triple DES EDE cipher algorithm (x86-64) 
+Enable: [CONFIG_CRYPTO_USER_API_HASH] User-space interface for hash algorithms
+Enable: [CONFIG_CRYPTO_USER_API_SKCIPHER] User-space interface for symmetric key cipher algorithms   
+Enable: [CONFIG_PKCS8_PRIVATE_KEY_PARSER] PKCS#8 private key parser [M]
+
+[ZRAM]
+Enable: [CONFIG_ZSMALLOC] Memory allocator for compressed pages [M]
+Enable: [CONFIG_ZSMALLOC_STAT] Export zsmalloc statistics
+Enable: [CONFIG_ZRAM] Compressed RAM block device support [M]
+Change: [ZRAM_DEF_COMP_ZSTD] Default zram compressor (zstd)
+Enable: [CONFIG_ZRAM_WRITEBACK] Write back incompressible or idle page to backing device
+Enable: [CONFIG_ZRAM_MEMORY_TRACKING] Track zRam block status
+Enable: [CONFIG_CRYPTO_LZO] LZO compression algorithm
+Enable: [CONFIG_CRYPTO_LZ4] LZ4 compression algorithm
+Enable: [CONFIG_CRYPTO_LZ4HC] LZ4HC compression algorithm
+Enable: [CONFIG_CRYPTO_ZSTD] Zstd compression algorithm
+
+[NBFC]
+Enable: [CONFIG_ACPI_EC_DEBUGFS] EC read/write access through /sys/kernel/debug/ec [M]
+
+[ZENPOWER]
+Disable: [CONFIG_SENSORS_K10TEMP] AMD Family 10h+ temperature sensor [M]
