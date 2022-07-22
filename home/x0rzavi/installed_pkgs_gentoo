@@ -59,6 +59,7 @@ net-vpn/wireguard-tools
 net-wireless/iwd
 sys-apps/bat
 sys-apps/dust
+sys-apps/earlyoom
 sys-apps/exa
 sys-apps/fd
 sys-apps/hdparm
@@ -81,7 +82,6 @@ sys-kernel/dracut
 sys-kernel/gentoo-kernel-bin
 sys-kernel/gentoo-sources
 sys-kernel/linux-firmware
-sys-kernel/xanmod-sources
 sys-kernel/zenpower3
 sys-power/RyzenAdj
 sys-power/acpilight
