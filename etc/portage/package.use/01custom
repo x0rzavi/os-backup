@@ -5,13 +5,11 @@ media-libs/mesa video_cards_radeonsi
 x11-libs/libdrm video_cards_radeon
 gui-wm/sway grimshot wallpapers -swaylock -swaybar
 gui-apps/waybar mpd network pulseaudio tray wifi
+media-sound/cmus -alsa ffmpeg pulseaudio
+media-sound/cava -alsa pulseaudio
 
-media-video/pipewire sound-server jack-sdk pipewire-alsa
+media-video/pipewire extra sound-server jack-sdk pipewire-alsa
 app-arch/p7zip -wxwidgets
 net-wireless/iwd standalone
 dev-vcs/git -perl
 sys-process/htop lm-sensors
-
-sys-fs/zfs dist-kernel
-sys-fs/zfs-kmod dist-kernel
-sys-kernel/zenpower3 dist-kernel

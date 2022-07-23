@@ -40,9 +40,14 @@ gui-apps/wlsunset
 gui-libs/gtk
 gui-libs/wlroots
 gui-libs/xdg-desktop-portal-wlr
+gui-wm/hyprland
 gui-wm/sway
 media-gfx/imv
+media-sound/alsa-utils
+media-sound/cava
+media-sound/cmus
 media-sound/playerctl
+media-sound/pulsemixer
 media-video/libva-utils
 media-video/mpv
 media-video/pipewire

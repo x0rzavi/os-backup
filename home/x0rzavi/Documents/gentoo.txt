@@ -38,7 +38,6 @@ Disable: [CONFIG_MICROCODE_INTEL] Intel microcode loading support
 Enable: [CONFIG_AMD_MEM_ENCRYPT] AMD Secure Memory Encryption (SME) support
 Enable: [CONFIG_ACPI_TAD] ACPI Time and Alarm (TAD) Device Support [M]
 Change: [CONFIG_CPU_FREQ_DEFAULT_GOV_PERFORMANCE] Default CPUFreq governor (performance)
-Enable: [CONFIG_X86_AMD_PSTATE] AMD Processor P-State driver
 Enable: [CONFIG_PARTITION_ADVANCED] Advanced partition selection
 Enable: [CONFIG_MSDOS_PARTITION] PC BIOS (MSDOS partition tables) support
 Enable: [CONFIG_EFI_PARTITION] EFI GUID Partition support
