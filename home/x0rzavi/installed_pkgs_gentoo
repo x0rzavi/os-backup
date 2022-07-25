@@ -1,6 +1,7 @@
 acct-group/netdev
 app-admin/ananicy-cpp
 app-admin/chezmoi
+app-admin/spectre-meltdown-checker
 app-admin/sudo
 app-admin/sysklogd
 app-arch/p7zip
@@ -20,9 +21,12 @@ app-portage/emlop
 app-portage/gentoolkit
 app-shells/fzf
 app-shells/gentoo-zsh-completions
+app-shells/starship
 app-shells/zoxide
 app-shells/zsh
+app-shells/zsh-autosuggestions
 app-shells/zsh-completions
+app-shells/zsh-syntax-highlighting
 app-text/dos2unix
 dev-lang/sassc
 dev-libs/bemenu
@@ -34,6 +38,7 @@ gnome-base/gnome-keyring
 gui-apps/cliphist
 gui-apps/foot
 gui-apps/mako
+gui-apps/swayidle
 gui-apps/swaylock-effects
 gui-apps/waybar
 gui-apps/wlsunset
@@ -45,7 +50,10 @@ gui-wm/sway
 media-gfx/imv
 media-sound/alsa-utils
 media-sound/cava
-media-sound/cmus
+media-sound/mpd
+media-sound/mpd-mpris
+media-sound/mpdscribble
+media-sound/ncmpcpp
 media-sound/playerctl
 media-sound/pulsemixer
 media-video/libva-utils

@@ -1,0 +1,1 @@
+* * * * * root [ "$(cat /sys/class/power_supply/BAT1/status)" = Discharging -a "$(cat /sys/class/power_supply/BAT1/capacity)" -lt 8 ] && logger "Critical battery threshold" && loginctl suspend

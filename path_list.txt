@@ -1,5 +1,6 @@
-/boot/config-5.18.12-gentoo
+/boot/config-5.18.14-gentoo
 /etc/auto-cpufreq.conf
+/etc/cron.d/battery
 /etc/conf.d/zram-init
 /etc/containers/policy.json
 /etc/containers/registries.conf
@@ -8,6 +9,7 @@
 /etc/default/grub
 /etc/docker/daemon.json
 /etc/dracut.conf.d/x0rzavi.conf
+/etc/elogind/logind.conf.d/x0rzavi.conf
 /etc/fstab
 /etc/hosts
 /etc/issue
@@ -48,8 +50,7 @@
 /etc/systemd/system/nbfc_service.timer
 /etc/systemd/zram-generator.conf
 /etc/udev/rules.d/00hdparm.rules
-/etc/udev/rules.d/01lowbat.rules
-/etc/udev/rules.d/02scheduler.rules
+/etc/udev/rules.d/01scheduler.rules
 /etc/vconsole.conf
 /home/x0rzavi/.bash_history
 /home/x0rzavi/.config/containers/storage.conf

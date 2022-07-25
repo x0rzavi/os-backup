@@ -1,14 +1,16 @@
 sys-devel/gcc zstd
 sys-kernel/gentoo-sources experimental
 
-media-libs/mesa video_cards_radeonsi
 x11-libs/libdrm video_cards_radeon
 gui-wm/sway grimshot wallpapers -swaylock -swaybar
 gui-apps/waybar mpd network pulseaudio tray wifi
-media-sound/cmus -alsa ffmpeg pulseaudio
-media-sound/cava -alsa pulseaudio
 
+media-libs/mesa video_cards_radeonsi
+media-sound/mpd -alsa
+media-sound/ncmpcpp clock outputs visualizer
+media-sound/cava -alsa pulseaudio
 media-video/pipewire extra sound-server jack-sdk pipewire-alsa
+
 app-arch/p7zip -wxwidgets
 net-wireless/iwd standalone
 dev-vcs/git -perl
