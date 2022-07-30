@@ -42,7 +42,7 @@
 /etc/ssh/sshd_config
 /etc/sudoers.d/00wheel
 /etc/sudoers.d/01feedback
-/etc/sudoers.d/02emerge
+/etc/sudoers.d/02gentoo
 /etc/sudoers.d/03psd
 /etc/sysctl.d/00vm.conf
 /etc/syslog.d/00x0rzavi.conf

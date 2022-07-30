@@ -4,6 +4,7 @@ sys-kernel/gentoo-sources experimental
 x11-libs/libdrm video_cards_radeon
 gui-wm/sway grimshot wallpapers -swaylock -swaybar
 gui-apps/waybar mpd network pulseaudio tray wifi
+www-client/firefox-bin -alsa
 
 media-libs/mesa video_cards_radeonsi
 media-sound/mpd -alsa
