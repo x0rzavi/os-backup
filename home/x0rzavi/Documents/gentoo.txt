@@ -26,6 +26,52 @@ umount -R /mnt/gentoo/sys
 zfs unmount zroot/root/gentoo
 zpool export zroot
 
+NAME                                USED  AVAIL  REFER  MOUNTPOINT
+zroot                              52.5G   544G    96K  none
+zroot/data                         46.2G   544G    96K  none
+zroot/data/gentoo                  20.4G   544G    96K  none
+zroot/data/gentoo/home             10.9G   544G  3.47G  /home
+zroot/data/gentoo/home/podman      1.02G   544G  1.02G  /home/x0rzavi/.local/share/containers/
+zroot/data/gentoo/root             23.9M   544G  12.7M  /root
+zroot/data/gentoo/usr              2.17G   544G    96K  none
+zroot/data/gentoo/usr/src          2.17G   544G  1.30G  /usr/src
+zroot/data/gentoo/var              7.36G   544G    96K  none
+zroot/data/gentoo/var/cache        4.98G   544G  3.85G  /var/cache
+zroot/data/gentoo/var/db           2.27G   544G  1.05G  /var/db
+zroot/data/gentoo/var/lib           288K   544G    96K  none
+zroot/data/gentoo/var/lib/docker     96K   544G    96K  /var/lib/docker
+zroot/data/gentoo/var/lib/libvirt    96K   544G    96K  /var/lib/libvirt
+zroot/data/gentoo/var/log          11.6M   544G  8.72M  /var/log
+zroot/data/gentoo/var/tmp           101M   544G   224K  /var/tmp
+zroot/data/gentoo/var/tmp/ccache   99.7M   544G  57.6M  /var/tmp/ccache
+zroot/data/gentoo/var/tmp/notmpfs   152K   544G   152K  /var/tmp/notmpfs
+zroot/data/music                   25.8G   544G  25.8G  /home/x0rzavi/Music
+zroot/root                         6.23G   544G    96K  none
+zroot/root/gentoo                  6.23G   544G  2.96G  /
+
+NAME                                USED  AVAIL  REFER  MOUNTPOINT
+zroot                              52.5G   544G    96K  none
+zroot/data                         46.2G   544G    96K  none
+zroot/data/gentoo                  20.4G   544G    96K  none
+zroot/data/gentoo/home             10.9G   544G  3.47G  /home
+zroot/data/gentoo/home/podman      1.02G   544G  1.02G	/home/x0rzavi/.local/share/containers/
+zroot/data/gentoo/root             23.9M   544G  12.7M  /root
+zroot/data/gentoo/usr              2.17G   544G    96K  none
+zroot/data/gentoo/usr/src          2.17G   544G  1.30G  /usr/src
+zroot/data/gentoo/var              7.36G   544G    96K  none
+zroot/data/gentoo/var/cache        4.98G   544G  3.85G  /var/cache
+zroot/data/gentoo/var/db           2.27G   544G  1.05G  /var/db
+zroot/data/gentoo/var/lib           288K   544G    96K  none
+zroot/data/gentoo/var/lib/docker     96K   544G    96K  /var/lib/docker
+zroot/data/gentoo/var/lib/libvirt    96K   544G    96K  /var/lib/libvirt
+zroot/data/gentoo/var/log          11.6M   544G  8.72M  /var/log
+zroot/data/gentoo/var/tmp           101M   544G   224K  /var/tmp
+zroot/data/gentoo/var/tmp/ccache   99.7M   544G  57.6M  /var/tmp/ccache
+zroot/data/gentoo/var/tmp/notmpfs   152K   544G   152K  /var/tmp/notmpfs
+zroot/data/music                   25.8G   544G  25.8G  /home/x0rzavi/Music
+zroot/root                         6.23G   544G    96K  none
+zroot/root/gentoo                  6.23G   544G  2.96G  /
+
 [BASE]
 Change: [CONFIG_KERNEL_ZSTD] Kernel compression mode (ZSTD)
 Enable: [CONFIG_IKCONFIG] Kernel .config support
