@@ -1,12 +1,14 @@
 sys-devel/gcc zstd
 sys-kernel/gentoo-sources experimental
+sys-devel/clang default-compiler-rt default-lld llvm-libunwind
 
 x11-libs/libdrm video_cards_radeon
+media-libs/mesa video_cards_radeonsi
+
 gui-wm/sway grimshot wallpapers -swaylock -swaybar
 gui-apps/waybar mpd network pulseaudio tray wifi
 www-client/firefox-bin -alsa
 
-media-libs/mesa video_cards_radeonsi
 media-sound/mpd -alsa
 media-sound/ncmpcpp clock outputs visualizer
 media-sound/cava -alsa pulseaudio

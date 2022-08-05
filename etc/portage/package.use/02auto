@@ -2,12 +2,6 @@
 # required by gui-apps/waybar-0.9.13::gentoo[tray]
 # required by waybar (argument)
 >=dev-libs/libdbusmenu-16.04.0-r2 gtk3
-# required by net-print/cups-filters-1.28.15::gentoo[postscript]
-# required by net-print/cups-2.4.2-r1::gentoo
-# required by www-client/google-chrome-unstable-104.0.5112.12::gentoo
-# required by @selected
-# required by @world (argument)
->=app-text/ghostscript-gpl-9.56.1 cups
 # required by net-im/telegram-desktop-3.6.1-r1::gentoo
 # required by net-im/telegram-desktop (argument)
 >=media-video/ffmpeg-4.4.2 opus

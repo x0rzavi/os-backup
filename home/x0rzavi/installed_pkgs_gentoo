@@ -8,7 +8,9 @@ app-containers/distrobox
 app-containers/netavark
 app-containers/podman
 app-crypt/seahorse
-app-editors/micro
+app-editors/nano
+app-editors/neovim
+app-editors/vim
 app-editors/vscode
 app-eselect/eselect-repository
 app-eselect/eselect-sh
@@ -35,6 +37,7 @@ dev-python/pip
 dev-util/ccache
 dev-util/git-delta
 dev-util/github-cli
+dev-util/rustup
 dev-vcs/git
 gnome-base/gnome-keyring
 gnome-extra/gucharmap
@@ -45,6 +48,7 @@ gui-apps/swayidle
 gui-apps/swaylock-effects
 gui-apps/waybar
 gui-apps/wlsunset
+gui-apps/wofi
 gui-libs/gtk
 gui-libs/wlroots
 gui-libs/xdg-desktop-portal-wlr
@@ -90,6 +94,10 @@ sys-apps/sd
 sys-apps/usbutils
 sys-block/zram-init
 sys-boot/efibootmgr
+sys-devel/clang
+sys-devel/lld
+sys-devel/llvm
+sys-devel/mold
 sys-fs/duf
 sys-fs/gdu
 sys-fs/sanoid
@@ -98,8 +106,14 @@ sys-fs/zfs-kmod
 sys-kernel/dracut
 sys-kernel/gentoo-kernel-bin
 sys-kernel/gentoo-sources
+sys-kernel/gentoo-sources:5.18.15
 sys-kernel/linux-firmware
 sys-kernel/zenpower3
+sys-libs/compiler-rt
+sys-libs/compiler-rt-sanitizers
+sys-libs/libcxx
+sys-libs/libcxxabi
+sys-libs/llvm-libunwind
 sys-power/RyzenAdj
 sys-power/acpilight
 sys-power/nbfc-linux
@@ -109,7 +123,6 @@ sys-process/cronie
 sys-process/htop
 sys-process/lsof
 www-client/firefox-bin
-www-client/google-chrome-unstable
 x11-apps/mesa-progs
 x11-base/xorg-server
 x11-misc/xdg-user-dirs
