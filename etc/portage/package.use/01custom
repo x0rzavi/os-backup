@@ -9,6 +9,7 @@ gui-wm/sway grimshot wallpapers -swaylock -swaybar
 gui-apps/waybar mpd network pulseaudio tray wifi
 www-client/firefox-bin -alsa
 
+media-video/ffmpeg -alsa pulseaudio x265 openh264 webp
 media-sound/mpd -alsa
 media-sound/ncmpcpp clock outputs visualizer
 media-sound/cava -alsa pulseaudio

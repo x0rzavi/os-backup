@@ -61,6 +61,7 @@ media-sound/mpd-mpris
 media-sound/mpdscribble
 media-sound/ncmpcpp
 media-sound/playerctl
+media-video/ffmpeg
 media-video/libva-utils
 media-video/mpv
 media-video/pipewire
