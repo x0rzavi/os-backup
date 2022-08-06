@@ -125,6 +125,7 @@ sys-process/htop
 sys-process/lsof
 www-client/firefox-bin
 x11-apps/mesa-progs
+x11-apps/xsetroot
 x11-base/xorg-server
 x11-misc/xdg-user-dirs
 x11-misc/xdg-user-dirs-gtk

@@ -33,6 +33,7 @@
 /etc/portage/env/notmpfs.conf
 /etc/portage/env/clang-lto-lld.conf
 /etc/portage/env/clang-nolto-lld.conf
+/etc/portage/env/clang-nolto-mold.conf
 /etc/portage/env/gcc-lto-bfd.conf
 /etc/portage/env/gcc-nolto-bfd.conf
 /etc/portage/package.use/00cpu_flags
