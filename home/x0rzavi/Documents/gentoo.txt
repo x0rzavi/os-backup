@@ -1,3 +1,5 @@
+[CHROOT IN]
+mkdir -p /mnt/gentoo
 zpool import -d /dev/disk/by-id/ata-TOSHIBA_MQ04ABF100_60KBP9C2T-part5 -N -R /mnt/gentoo zroot
 zfs mount zroot/root/gentoo
 zfs mount -a
@@ -6,13 +8,17 @@ mount /dev/sda1 /mnt/gentoo/efi
 mount --bind /mnt/gentoo/efi/EFI/Gentoo /mnt/gentoo/boot
 cp --dereference /etc/resolv.conf /mnt/gentoo/etc/
 mount --types proc /proc /mnt/gentoo/proc 
-mount --rbind /sys /mnt/gentoo/sys 
-mount --rbind /dev /mnt/gentoo/dev 
+mount --rbind /sys /mnt/gentoo/sys
+mount --make-rslave /mnt/gentoo/sys
+mount --rbind /dev /mnt/gentoo/dev
+mount --make-rslave /mnt/gentoo/dev 
 mount --bind /run /mnt/gentoo/run
+mount --make-slave /mnt/gentoo/run 
 chroot /mnt/gentoo /bin/bash 
 source /etc/profile
 export PS1="(chroot) ${PS1}"
 
+[EXIT CHROOT]
 exit
 umount -l /mnt/gentoo/dev{/shm,/pts,}
 umount /mnt/gentoo/efi
@@ -20,12 +26,12 @@ umount /mnt/gentoo/boot
 zfs unmount -a
 umount /mnt/gentoo/proc
 umount /mnt/gentoo/run
-umount -l /mnt/gentoo/sys/fs/cgroup
-umount -l /mnt/gentoo/sys/kernel/debug
 umount -R /mnt/gentoo/sys
 zfs unmount zroot/root/gentoo
+rm -fr /mnt/gentoo
 zpool export zroot
 
+[POOL STRUCTURE]
 NAME                                USED  AVAIL  REFER  MOUNTPOINT
 zroot                              52.5G   544G    96K  none
 zroot/data                         46.2G   544G    96K  none
@@ -49,6 +55,7 @@ zroot/data/music                   25.8G   544G  25.8G  /home/x0rzavi/Music
 zroot/root                         6.23G   544G    96K  none
 zroot/root/gentoo                  6.23G   544G  2.96G  /
 
+[KERNEL CONFIGURATION]
 [BASE]
 Change: [CONFIG_KERNEL_ZSTD] Kernel compression mode (ZSTD)
 Enable: [CONFIG_IKCONFIG] Kernel .config support
