@@ -1,3 +1,4 @@
+[CHROOT IN]
 mkdir -p /mnt/gentoo
 zpool import -d /dev/disk/by-id/ata-TOSHIBA_MQ04ABF100_60KBP9C2T-part5 -N -R /mnt/gentoo zroot
 zfs mount zroot/root/gentoo
@@ -17,6 +18,7 @@ chroot /mnt/gentoo /bin/bash
 source /etc/profile
 export PS1="(chroot) ${PS1}"
 
+[EXIT CHROOT]
 exit
 umount -l /mnt/gentoo/dev{/shm,/pts,}
 umount /mnt/gentoo/efi
@@ -29,6 +31,7 @@ zfs unmount zroot/root/gentoo
 rm -fr /mnt/gentoo
 zpool export zroot
 
+[POOL STRUCTURE]
 NAME                                USED  AVAIL  REFER  MOUNTPOINT
 zroot                              52.5G   544G    96K  none
 zroot/data                         46.2G   544G    96K  none
@@ -52,6 +55,7 @@ zroot/data/music                   25.8G   544G  25.8G  /home/x0rzavi/Music
 zroot/root                         6.23G   544G    96K  none
 zroot/root/gentoo                  6.23G   544G  2.96G  /
 
+[KERNEL CONFIGURATION]
 [BASE]
 Change: [CONFIG_KERNEL_ZSTD] Kernel compression mode (ZSTD)
 Enable: [CONFIG_IKCONFIG] Kernel .config support
