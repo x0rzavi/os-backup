@@ -47,6 +47,7 @@ gui-apps/mako
 gui-apps/swayidle
 gui-apps/swaylock-effects
 gui-apps/waybar
+gui-apps/wf-recorder
 gui-apps/wlsunset
 gui-apps/wofi
 gui-libs/gtk
@@ -55,6 +56,7 @@ gui-libs/xdg-desktop-portal-wlr
 gui-wm/newm
 gui-wm/sway
 media-gfx/imv
+media-libs/mesa
 media-sound/cava
 media-sound/mpd
 media-sound/mpd-mpris
@@ -64,6 +66,7 @@ media-sound/playerctl
 media-video/ffmpeg
 media-video/libva-utils
 media-video/mpv
+media-video/obs-studio
 media-video/pipewire
 net-dns/doggo
 net-dns/nextdns
@@ -101,6 +104,7 @@ sys-devel/llvm
 sys-devel/mold
 sys-fs/duf
 sys-fs/gdu
+sys-fs/genfstab
 sys-fs/sanoid
 sys-fs/zfs
 sys-fs/zfs-kmod
@@ -132,3 +136,4 @@ x11-misc/xdg-user-dirs-gtk
 x11-misc/xsettingsd
 x11-terms/alacritty
 x11-themes/gtk-engines-murrine
+x11-themes/kvantum

@@ -2,6 +2,7 @@
 /etc/auto-cpufreq.conf
 /etc/cron.d/battery
 /etc/conf.d/zram-init
+/etc/conf.d/sysklogd
 /etc/containers/policy.json
 /etc/containers/registries.conf
 /etc/containers/storage.conf
@@ -39,6 +40,7 @@
 /etc/portage/package.use/00cpu_flags
 /etc/portage/package.use/01custom
 /etc/portage/package.use/02auto
+/etc/portage/package.env
 /etc/portage/repos.conf/gentoo.conf
 /etc/portage/repos.conf/eselect-repo.conf
 /etc/portage/make.conf

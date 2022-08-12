@@ -14,6 +14,7 @@ media-sound/mpd -alsa
 media-sound/ncmpcpp clock outputs visualizer
 media-sound/cava -alsa pulseaudio
 media-video/pipewire extra sound-server jack-sdk pipewire-alsa
+media-video/obs-studio -alsa pulseaudio
 
 app-arch/p7zip -wxwidgets
 net-wireless/iwd standalone
