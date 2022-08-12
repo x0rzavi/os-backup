@@ -1,3 +1,4 @@
+mkdir -p /mnt/gentoo
 zpool import -d /dev/disk/by-id/ata-TOSHIBA_MQ04ABF100_60KBP9C2T-part5 -N -R /mnt/gentoo zroot
 zfs mount zroot/root/gentoo
 zfs mount -a
@@ -25,6 +26,7 @@ umount /mnt/gentoo/proc
 umount /mnt/gentoo/run
 umount -R /mnt/gentoo/sys
 zfs unmount zroot/root/gentoo
+rm -fr /mnt/gentoo
 zpool export zroot
 
 NAME                                USED  AVAIL  REFER  MOUNTPOINT
