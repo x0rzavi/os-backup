@@ -23,8 +23,6 @@ umount /mnt/gentoo/boot
 zfs unmount -a
 umount /mnt/gentoo/proc
 umount /mnt/gentoo/run
-umount -l /mnt/gentoo/sys/fs/cgroup
-umount -l /mnt/gentoo/sys/kernel/debug
 umount -R /mnt/gentoo/sys
 zfs unmount zroot/root/gentoo
 zpool export zroot
