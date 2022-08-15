@@ -1,5 +1,5 @@
 [CHROOT IN]
-zpool import -d /dev/disk/by-id/ata-TOSHIBA_MQ04ABF100_60KBP9C2T-part5 -N -R /mnt/gentoo zroot
+zpool import -f -d /dev/disk/by-id/ata-TOSHIBA_MQ04ABF100_60KBP9C2T-part5 -N -R /mnt/gentoo zroot
 zfs mount -a
 zfs mount
 mount /dev/sda1 /mnt/gentoo/efi
@@ -54,16 +54,13 @@ zroot/root/gentoo                  6.23G   544G  2.96G  /
 
 [KERNEL CONFIGURATION]
 [BASE]
-Change: [CONFIG_KERNEL_ZSTD] Kernel compression mode (ZSTD)
+Change: [CONFIG_KERNEL_LZ4] Kernel compression mode (LZ4)
 Enable: [CONFIG_IKCONFIG] Kernel .config support
 Enable: [CONFIG_IKCONFIG_PROC] Enable access to .config through /proc/config.gz
 Disable: [CONFIG_X86_EXTENDED_PLATFORM] Support for extended (non-PC) x86 platforms
 Enable: [CONFIG_X86_AMD_PLATFORM_DEVICE] AMD ACPI2Platform devices support
-Change: [CONFIG_MZEN] Processor family (AMD Zen)
-Disable: [CONFIG_X86_MCE_INTEL] Intel MCE features
-Disable: [CONFIG_MICROCODE_INTEL] Intel microcode loading support
+## Change: [CONFIG_MZEN] Processor family (AMD Zen)
 Enable: [CONFIG_AMD_MEM_ENCRYPT] AMD Secure Memory Encryption (SME) support
-Enable: [CONFIG_ACPI_TAD] ACPI Time and Alarm (TAD) Device Support [M]
 Change: [CONFIG_CPU_FREQ_DEFAULT_GOV_PERFORMANCE] Default CPUFreq governor (performance)
 Enable: [CONFIG_PARTITION_ADVANCED] Advanced partition selection
 Enable: [CONFIG_MSDOS_PARTITION] PC BIOS (MSDOS partition tables) support
@@ -75,9 +72,7 @@ Disable: [CONFIG_INPUT_TABLET] Tablets
 Disable: [CONFIG_INPUT_TOUCHSCREEN] Touchscreens 
 Disable: [CONFIG_INPUT_MISC] Miscellaneous devices
 Enable: [CONFIG_SENSORS_K10TEMP] AMD Family 10h+ temperature sensor [M]
-Change: [CONFIG_IOMMU_DEFAULT_PASSTHROUGH] IOMMU default domain type (Passthrough)
 Enable: [CONFIG_CRYPTO_DEFLATE] Deflate compression algorithm
-Enable: [CONFIG_GENTOO_KERNEL_SELF_PROTECTION] Kernel Self Protection Project
 
 [FS]
 Change: [CONFIG_EXT4_FS] The Extended 4 (ext4) filesystem [M]
@@ -86,7 +81,6 @@ Enable: [CONFIG_NTFS3_FS] NTFS Read-Write file system support [M]
 Enable: [CONFIG_NTFS3_LZX_XPRESS] activate support of external compressions lzx/xpress
 
 [DISPLAY/AUDIO]
-Enable: [CONFIG_ACPI_VIDEO] ACPI Video [M]
 Enable: [CONFIG_DRM_AMDGPU] AMD GPU [M]
 Enable: [CONFIG_DRM_AMD_ACP] Enable AMD Audio CoProcessor IP support
 Enable: [CONFIG_HSA_AMD] HSA kernel driver for AMD GPU devices
@@ -95,7 +89,6 @@ Disable: [CONFIG_DRM_VIRTIO_GPU] Virtio GPU driver
 Enable: [CONFIG_FB] Support for frame buffer devices
 Enable: [CONFIG_FB_EFI] EFI-based Framebuffer Support
 Enable: [CONFIG_SND_HDA_CODEC_REALTEK] Build Realtek HD-audio codec support 
-Enable: [CONFIG_SND_HDA_CODEC_HDMI] Build HDMI/DisplayPort HD-audio codec support
 Disable: [CONFIG_SND_USB] USB sound devices
 
 [NETWORK]
@@ -133,10 +126,9 @@ Enable: [CONFIG_HP_WMI] HP WMI extras [M]
 Enable: [CONFIG_WIRELESS_HOTKEY] Wireless hotkey button [M]
 
 [TOUCHPAD]
-Disable: [CONFIG_I2C_I801] Intel 82801 (ICH/PCH)
 Enable: [CONFIG_I2C_PIIX4] Intel PIIX4 and compatible (ATI/AMD/Serverworks/Broadcom/SMSC) [M]
-Enable: [CONFIG_I2C_DESIGNWARE_SLAVE] Synopsis Designware Slave
 Enable: [CONFIG_I2C_DESIGNWARE_PLATFORM] Synopsis Designware Platform [M]
+Enable: [CONFIG_I2C_DESIGNWARE_SLAVE] Synopsis Designware Slave
 Enable: [CONFIG_PINCTRL_AMD] AMD GPIO pin control
 Enable: [CONFIG_HID_MULTITOUCH] HID Multitouch panels [ONLY][M]
 Enable: [CONFIG_I2C_HID_ACPI] HID over I2C transport layer ACPI driver [M]
