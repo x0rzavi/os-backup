@@ -1,7 +1,5 @@
 [CHROOT IN]
-mkdir -p /mnt/gentoo
 zpool import -d /dev/disk/by-id/ata-TOSHIBA_MQ04ABF100_60KBP9C2T-part5 -N -R /mnt/gentoo zroot
-zfs mount zroot/root/gentoo
 zfs mount -a
 zfs mount
 mount /dev/sda1 /mnt/gentoo/efi
@@ -23,11 +21,10 @@ exit
 umount -l /mnt/gentoo/dev{/shm,/pts,}
 umount /mnt/gentoo/efi
 umount /mnt/gentoo/boot
-zfs unmount -a
 umount /mnt/gentoo/proc
 umount /mnt/gentoo/run
 umount -R /mnt/gentoo/sys
-zfs unmount zroot/root/gentoo
+zfs unmount -a
 rm -fr /mnt/gentoo
 zpool export zroot
 
