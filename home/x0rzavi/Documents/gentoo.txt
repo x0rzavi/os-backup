@@ -142,24 +142,23 @@ Enable: [CONFIG_CRYPTO_SHA1_SSSE3] SHA1 digest algorithm (SSSE3/AVX/AVX2/SHA-NI)
 Enable: [CONFIG_CRYPTO_SHA256_SSSE3] SHA256 digest algorithm (SSSE3/AVX/AVX2/SHA-NI)
 Enable: [CONFIG_CRYPTO_SHA512_SSSE3] SHA512 digest algorithm (SSSE3/AVX/AVX2)
 Enable: [CONFIG_CRYPTO_AES_NI_INTEL] AES cipher algorithms (AES-NI)
-Enable: [CONFIG_CRYPTO_ARC4] ARC4 cipher algorithm
 Enable: [CONFIG_CRYPTO_DES] DES and Triple DES EDE cipher algorithms
 Enable: [CONFIG_CRYPTO_DES3_EDE_X86_64] Triple DES EDE cipher algorithm (x86-64) 
 Enable: [CONFIG_CRYPTO_USER_API_HASH] User-space interface for hash algorithms
+Enable: [CONFIG_CRYPTO_ARC4] ARC4 cipher algorithm
 Enable: [CONFIG_CRYPTO_USER_API_SKCIPHER] User-space interface for symmetric key cipher algorithms   
 Enable: [CONFIG_PKCS8_PRIVATE_KEY_PARSER] PKCS#8 private key parser [M]
 
 [ZRAM]
-Enable: [CONFIG_ZSMALLOC] Memory allocator for compressed pages [M]
-Enable: [CONFIG_ZSMALLOC_STAT] Export zsmalloc statistics
-Enable: [CONFIG_ZRAM] Compressed RAM block device support [M]
-Change: [ZRAM_DEF_COMP_ZSTD] Default zram compressor (zstd)
-Enable: [CONFIG_ZRAM_WRITEBACK] Write back incompressible or idle page to backing device
-Enable: [CONFIG_ZRAM_MEMORY_TRACKING] Track zRam block status
 Enable: [CONFIG_CRYPTO_LZO] LZO compression algorithm
 Enable: [CONFIG_CRYPTO_LZ4] LZ4 compression algorithm
 Enable: [CONFIG_CRYPTO_LZ4HC] LZ4HC compression algorithm
 Enable: [CONFIG_CRYPTO_ZSTD] Zstd compression algorithm
+Enable: [CONFIG_ZRAM] Compressed RAM block device support [M]
+Change: [ZRAM_DEF_COMP_ZSTD] Default zram compressor (zstd)
+Enable: [CONFIG_ZRAM_WRITEBACK] Write back incompressible or idle page to backing device
+Enable: [CONFIG_ZRAM_MEMORY_TRACKING] Track zRam block status
+Enable: [CONFIG_ZSMALLOC_STAT] Export zsmalloc statistics
 
 [NBFC]
 Enable: [CONFIG_ACPI_EC_DEBUGFS] EC read/write access through /sys/kernel/debug/ec [M]
