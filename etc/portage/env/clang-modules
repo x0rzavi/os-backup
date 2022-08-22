@@ -1,0 +1,1 @@
+BUILD_PARAMS="${BUILD_PARAMS} LLVM=1 ldflags-y=--thinlto-cache-dir= LDFLAGS_MODULE=--thinlto-cache-dir="

@@ -3,7 +3,7 @@ unload_on_stop=yes
 num_devices=2
 
 type0="/var/tmp/portage"
-size0=15000
+size0=20000
 maxs0=8
 algo0=zstd
 flag0=ext4

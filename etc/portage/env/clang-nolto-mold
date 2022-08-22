@@ -1,4 +1,4 @@
-# clang + noLTO + mold 
+# clang + noLTO + mold
 
 COMMON_FLAGS="-march=native -O3 -pipe"
 CFLAGS="${COMMON_FLAGS}"
