@@ -5,6 +5,7 @@ zfs create -u -o mountpoint=/           zroot/root/gentoo
 zfs create -u -o mountpoint=none -p     zroot/data/gentoo/var/lib
 zfs create -u -o mountpoint=none        zroot/data/gentoo/usr
 zfs create -u -o mountpoint=/home       zroot/data/gentoo/home
+zfs create -u -o mountpoint=/home/x0rzavi/.local/share/containers zroot/data/gentoo/home/podman
 zfs create -u -o mountpoint=/root       zroot/data/gentoo/root
 zfs create -u -o mountpoint=/var/log    zroot/data/gentoo/var/log
 zfs create -u -o mountpoint=/var/tmp    zroot/data/gentoo/var/tmp
@@ -67,6 +68,7 @@ zroot                        8.30G   558G    96K  none
 zroot/data                   5.98G   558G    96K  none
 zroot/data/gentoo            5.98G   558G    96K  none
 zroot/data/gentoo/home       1.53G   558G  1.49G  /home
+zroot/data/gentoo/home/podman  1.22M   555G  1.22M  /home/x0rzavi/.local/share/containers
 zroot/data/gentoo/root        616K   558G   452K  /root
 zroot/data/gentoo/usr         782M   558G    96K  none
 zroot/data/gentoo/usr/src     782M   558G   782M  /usr/src
@@ -136,11 +138,12 @@ Enable: [CONFIG_NETFILTER_ADVANCED] Advanced netfilter configuration
 Enable: [CONFIG_NETFILTER_XT_CONNMARK] ctmark target and match support [M]
 Enable: [CONFIG_NETFILTER_XT_MATCH_COMMENT] "comment" match support [M]
 Enable: [CONFIG_NETFILTER_XT_MATCH_IPVS] "ipvs" match support [M]
+Enable: [CONFIG_NETFILTER_XT_MATCH_HASHLIMIT] "hashlimit" match support [M]
+Enable: [CONFIG_IP_NF_TARGET_REDIRECT] REDIRECT target support [M]
 Enable: [CONFIG_NF_CONNTRACK_MARK] Connection mark tracking support
 Enable: [CONFIG_NF_TABLES] Netfilter nf_tables support [M]
 Enable: [CONFIG_NF_TABLES_INET] Netfilter nf_tables mixed IPv4/IPv6 tables support
 Enable: [CONFIG_NF_TABLES_NETDEV] Netfilter nf_tables netdev tables support
-Enable: [CONFIG_NETFILTER_XT_MATCH_HASHLIMIT] "hashlimit" match support [M]
 Enable: [CONFIG_NFT_CT] Netfilter nf_tables conntrack module [M]
 Enable: [CONFIG_NFT_FIB_IPV4] nf_tables fib / ip route lookup support [M]
 Enable: [CONFIG_NFT_FIB_IPV6] nf_tables fib / ipv6 route lookup support [M]
@@ -149,10 +152,25 @@ Enable: [CONFIG_NFT_LOG] Netfilter nf_tables log module [M]
 Enable: [CONFIG_NFT_MASQ] Netfilter nf_tables masquerade support [M]
 Enable: [CONFIG_NFT_REDIR] Netfilter nf_tables redirect support [M]
 Enable: [CONFIG_NFT_NAT] Netfilter nf_tables nat module [M]
-Enable: [CONFIG_BRIDGE_NETFILTER] Bridged IP/ARP packets filtering [M]
 Enable: [CONFIG_IPV6_MULTIPLE_TABLES] IPv6: Multiple Routing Tables
 Enable: [CONFIG_IP6_NF_RAW] raw table support (required for TRACE) [M]
 Enable: [CONFIG_IP_NF_RAW] raw table support (required for NOTRACK/TRACE) [M]
+
+[PODMAN/DOCKER] [https://github.com/moby/moby/raw/master/contrib/check-config.sh]
+Enable: [CONFIG_CFS_BANDWIDTH] CPU bandwidth provisioning for FAIR_GROUP_SCHED
+Enable: [CONFIG_RT_GROUP_SCHED] Group scheduling for SCHED_RR/FIFO
+Enable: [CONFIG_BLK_DEV_THROTTLING] Block layer bio throttling support
+Enable: [CONFIG_TUN] Universal TUN/TAP device driver support [M]
+Enable: [CONFIG_BRIDGE] 802.1d Ethernet Bridging [M]
+Enable: [CONFIG_BRIDGE_NETFILTER] Bridged IP/ARP packets filtering [M]
+Enable: [CONFIG_VLAN_8021Q] 802.1Q/802.1ad VLAN Support [M]
+Enable: [CONFIG_BRIDGE_VLAN_FILTERING] VLAN filtering
+Enable: [CONFIG_FUSE_FS] FUSE (Filesystem in Userspace) support
+Enable: [CONFIG_OVERLAY_FS] Overlay filesystem support
+Enable: [CONFIG_MEMCG] Memory controller
+Enable: [CONFIG_VETH] Virtual ethernet pair device [M]
+Enable: [CONFIG_IP_VS] IP virtual server support [M]
+Enable: [CONFIG_VXLAN] Virtual eXtensible Local Area Network (VXLAN) [M]
 
 [KEYBOARD]
 Enable: [CONFIG_ACPI_WMI] WMI [M]
@@ -199,15 +217,3 @@ Enable: [CONFIG_ACPI_EC_DEBUGFS] EC read/write access through /sys/kernel/debug/
 
 [ZENPOWER]
 Disable: [CONFIG_SENSORS_K10TEMP] AMD Family 10h+ temperature sensor [M]
-
-[PODMAN/DOCKER] [https://github.com/moby/moby/raw/master/contrib/check-config.sh]
-Enable: [CONFIG_TUN] Universal TUN/TAP device driver support [M]
-Enable: [CONFIG_BRIDGE] 802.1d Ethernet Bridging [M]
-Enable: [CONFIG_VLAN_8021Q] 802.1Q/802.1ad VLAN Support [M]
-Enable: [CONFIG_BRIDGE_VLAN_FILTERING] VLAN filtering
-Enable: [CONFIG_FUSE_FS] FUSE (Filesystem in Userspace) support
-Enable: [CONFIG_OVERLAY_FS] Overlay filesystem support
-Enable: [CONFIG_MEMCG] Memory controller
-Enable: [CONFIG_VETH] Virtual ethernet pair device [M]
-Enable: [CONFIG_IP_VS] IP virtual server support [M]
-Enable: [CONFIG_VXLAN] Virtual eXtensible Local Area Network (VXLAN) [M]
