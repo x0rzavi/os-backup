@@ -31,3 +31,6 @@
 PARTUUID=d4d67e60-42f0-489b-beb0-ffeb2b33333e	/efi      	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro	0 2
 
 /efi/EFI/Gentoo     	/boot     	none      	rw,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro,bind	0 0
+
+# /dev/sda6 UUID=b8ca9424-5f81-4fbd-aafc-7f7c2e84f581
+PARTUUID=c39d889e-1d85-47a1-853d-20c41a881e94	none      	swap      	defaults  	0 0

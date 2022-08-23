@@ -31,6 +31,7 @@ dev-util/ccache
 dev-util/git-delta
 dev-util/github-cli
 dev-vcs/git
+gnome-extra/gucharmap
 gui-apps/foot
 gui-apps/waybar
 gui-apps/wl-clipboard
@@ -52,6 +53,7 @@ sys-apps/dust
 sys-apps/earlyoom
 sys-apps/exa
 sys-apps/fd
+sys-apps/gptfdisk
 sys-apps/hdparm
 sys-apps/irqbalance
 sys-apps/plocate
@@ -74,7 +76,6 @@ sys-kernel/dracut
 sys-kernel/gentoo-sources
 sys-kernel/linux-firmware
 sys-kernel/zenpower3
-sys-kernel/zenpower3::x0rzavi
 sys-libs/compiler-rt
 sys-libs/efivar
 sys-libs/libcxx

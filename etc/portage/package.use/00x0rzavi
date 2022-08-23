@@ -11,6 +11,7 @@ media-video/pipewire extra jack-sdk pipewire-alsa sound-server
 media-libs/libsdl2 gles2
 sys-apps/irqbalance -numa
 sys-process/htop caps delayacct hwloc lm-sensors
+net-wireless/iwd standalone
 app-arch/p7zip -wxwidgets rar
 gui-apps/waybar mpd network wifi
 dev-lang/rust-bin rustfmt
