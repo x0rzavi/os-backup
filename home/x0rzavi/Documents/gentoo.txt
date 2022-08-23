@@ -157,6 +157,8 @@ Enable: [CONFIG_IP6_NF_RAW] raw table support (required for TRACE) [M]
 Enable: [CONFIG_IP_NF_RAW] raw table support (required for NOTRACK/TRACE) [M]
 
 [PODMAN/DOCKER] [https://github.com/moby/moby/raw/master/contrib/check-config.sh]
+Enable: [CONFIG_BPF_SYSCALL] Enable bpf() system call
+Enable: [CONFIG_CGROUP_BPF] Support for eBPF programs attached to cgroups
 Enable: [CONFIG_CFS_BANDWIDTH] CPU bandwidth provisioning for FAIR_GROUP_SCHED
 Enable: [CONFIG_RT_GROUP_SCHED] Group scheduling for SCHED_RR/FIFO
 Enable: [CONFIG_BLK_DEV_THROTTLING] Block layer bio throttling support
@@ -170,6 +172,13 @@ Enable: [CONFIG_OVERLAY_FS] Overlay filesystem support
 Enable: [CONFIG_MEMCG] Memory controller
 Enable: [CONFIG_VETH] Virtual ethernet pair device [M]
 Enable: [CONFIG_IP_VS] IP virtual server support [M]
+Enable: [CONFIG_IP_VS_PROTO_TCP] TCP load balancing support
+Enable: [CONFIG_IP_VS_PROTO_UDP] UDP load balancing support
+Enable: [CONFIG_IP_VS_NFCT] Netfilter connection tracking
+Enable: [CONFIG_IP_VS_RR] round-robin scheduling [M]
+Enable: [CONFIG_IPVLAN] IP-VLAN support [M]
+Enable: [CONFIG_MACVLAN] MAC-VLAN support [M]
+Enable: [CONFIG_DUMMY] Dummy net driver support [M]
 Enable: [CONFIG_VXLAN] Virtual eXtensible Local Area Network (VXLAN) [M]
 
 [KEYBOARD]

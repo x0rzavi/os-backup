@@ -7,6 +7,8 @@ app-admin/sysklogd
 app-arch/lz4
 app-arch/p7zip
 app-containers/distrobox
+app-containers/docker
+app-containers/docker-cli
 app-containers/netavark
 app-containers/podman
 app-editors/nano
