@@ -6,6 +6,8 @@ app-admin/sudo
 app-admin/sysklogd
 app-arch/lz4
 app-arch/p7zip
+app-containers/netavark
+app-containers/podman
 app-editors/nano
 app-editors/neovim
 app-eselect/eselect-repository
@@ -27,6 +29,7 @@ app-shells/zsh-autosuggestions
 app-shells/zsh-completions
 app-shells/zsh-syntax-highlighting
 app-text/dos2unix
+dev-lang/sassc
 dev-util/ccache
 dev-util/git-delta
 dev-util/github-cli
@@ -35,8 +38,10 @@ gnome-extra/gucharmap
 gui-apps/foot
 gui-apps/waybar
 gui-apps/wl-clipboard
+gui-apps/wlsunset
 gui-libs/xdg-desktop-portal-wlr
 gui-wm/newm
+media-sound/cava
 media-sound/playerctl
 media-video/libva-utils
 media-video/mpv
@@ -45,7 +50,9 @@ net-libs/nodejs
 net-misc/aria2
 net-misc/dhcpcd
 net-misc/gping
+net-misc/wgcf
 net-misc/yt-dlp
+net-vpn/wireguard-tools
 net-wireless/iwd
 sys-apps/bat
 sys-apps/bat-extras
@@ -90,6 +97,9 @@ sys-process/htop
 sys-process/lsof
 www-client/firefox-bin
 x11-apps/mesa-progs
+x11-apps/xsetroot
 x11-base/xorg-server
 x11-misc/xdg-user-dirs-gtk
+x11-misc/xsettingsd
 x11-terms/alacritty
+x11-themes/gtk-engines-murrine

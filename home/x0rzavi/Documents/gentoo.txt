@@ -128,24 +128,31 @@ Enable: [CONFIG_RTW88_8821CE] Realtek 8821CE PCI wireless network adapter [ONLY]
 [WIREGUARD]
 Enable: [CONFIG_WIREGUARD] WireGuard secure network tunnel [M]
 Enable: [CONFIG_CRYPTO_ECDSA] ECDSA (NIST P192, P256 etc.) algorithm [M]
+Enable: [CONFIG_CRYPTO_PCRYPT] Parallel crypto engine
 
 [NFTABLES]
+Enable: [CONFIG_NET_FOU] IP: Foo (IP protocols) over UDP
 Enable: [CONFIG_NETFILTER_ADVANCED] Advanced netfilter configuration
+Enable: [CONFIG_NETFILTER_XT_CONNMARK] ctmark target and match support [M]
+Enable: [CONFIG_NETFILTER_XT_MATCH_COMMENT] "comment" match support [M]
+Enable: [CONFIG_NETFILTER_XT_MATCH_IPVS] "ipvs" match support [M]
 Enable: [CONFIG_NF_CONNTRACK_MARK] Connection mark tracking support
 Enable: [CONFIG_NF_TABLES] Netfilter nf_tables support [M]
 Enable: [CONFIG_NF_TABLES_INET] Netfilter nf_tables mixed IPv4/IPv6 tables support
 Enable: [CONFIG_NF_TABLES_NETDEV] Netfilter nf_tables netdev tables support
+Enable: [CONFIG_NETFILTER_XT_MATCH_HASHLIMIT] "hashlimit" match support [M]
 Enable: [CONFIG_NFT_CT] Netfilter nf_tables conntrack module [M]
-Enable: [CONFIG_NFT_FIB_INET] Netfilter nf_tables fib inet support
+Enable: [CONFIG_NFT_FIB_IPV4] nf_tables fib / ip route lookup support [M]
+Enable: [CONFIG_NFT_FIB_IPV6] nf_tables fib / ipv6 route lookup support [M]
+Enable: [CONFIG_NFT_FIB_INET] Netfilter nf_tables fib inet support [M]
 Enable: [CONFIG_NFT_LOG] Netfilter nf_tables log module [M]
 Enable: [CONFIG_NFT_MASQ] Netfilter nf_tables masquerade support [M]
 Enable: [CONFIG_NFT_REDIR] Netfilter nf_tables redirect support [M]
 Enable: [CONFIG_NFT_NAT] Netfilter nf_tables nat module [M]
-Enable: [CONFIG_NF_TABLES_IPV4] IPv4 nf_tables support
-Enable: [CONFIG_NFT_FIB_IPV4] nf_tables fib / ip route lookup support [M]
-Enable: [CONFIG_NF_TABLES_IPV6] IPv6 nf_tables support
-Enable: [CONFIG_NFT_FIB_IPV6] nf_tables fib / ipv6 route lookup support [M]
+Enable: [CONFIG_BRIDGE_NETFILTER] Bridged IP/ARP packets filtering [M]
 Enable: [CONFIG_IPV6_MULTIPLE_TABLES] IPv6: Multiple Routing Tables
+Enable: [CONFIG_IP6_NF_RAW] raw table support (required for TRACE) [M]
+Enable: [CONFIG_IP_NF_RAW] raw table support (required for NOTRACK/TRACE) [M]
 
 [KEYBOARD]
 Enable: [CONFIG_ACPI_WMI] WMI [M]
@@ -202,7 +209,5 @@ Enable: [CONFIG_FUSE_FS] FUSE (Filesystem in Userspace) support
 Enable: [CONFIG_OVERLAY_FS] Overlay filesystem support
 Enable: [CONFIG_MEMCG] Memory controller
 Enable: [CONFIG_VETH] Virtual ethernet pair device [M]
-Enable: [CONFIG_BRIDGE_NETFILTER] Bridged IP/ARP packets filtering
 Enable: [CONFIG_IP_VS] IP virtual server support [M]
-Enable: [CONFIG_NETFILTER_XT_MATCH_IPVS] "ipvs" match support [M]
-Enable: [CONFIG_NETFILTER_XT_MATCH_COMMENT] "comment" match support [M]
+Enable: [CONFIG_VXLAN] Virtual eXtensible Local Area Network (VXLAN) [M]
