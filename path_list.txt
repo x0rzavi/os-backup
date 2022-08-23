@@ -52,7 +52,6 @@
 /etc/udev/rules.d/00hdparm.rules
 /etc/udev/rules.d/01scheduler.rules
 /etc/vconsole.conf
-/home/x0rzavi/.config/containers/storage.conf
 /home/x0rzavi/.config/docker/daemon.json
 /home/x0rzavi/.config/docker/key.json
 /home/x0rzavi/.config/pipewire/pipewire-pulse.conf.d/mopidy.conf
