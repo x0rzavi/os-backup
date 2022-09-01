@@ -9,6 +9,7 @@ app-arch/p7zip
 app-containers/distrobox
 app-containers/docker
 app-containers/docker-cli
+app-containers/docker-compose
 app-containers/netavark
 app-containers/podman
 app-editors/nano
