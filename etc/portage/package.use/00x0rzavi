@@ -3,7 +3,6 @@ sys-devel/gcc -lto -pgo
 
 sys-kernel/linux-firmware initramfs
 sys-kernel/gentoo-sources experimental
-sys-fs/zfs kernel-builtin
 
 media-libs/mesa video_cards_radeonsi
 x11-libs/libdrm video_cards_radeon
