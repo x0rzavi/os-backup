@@ -1,0 +1,19 @@
+# gcc + LTO + bfd
+CC="gcc"
+CXX="g++"
+
+COMMON_FLAGS="-march=native -O3 -pipe -flto=8"
+CFLAGS="${COMMON_FLAGS}"
+CXXFLAGS="${COMMON_FLAGS}"
+FCFLAGS="${COMMON_FLAGS}"
+FFLAGS="${COMMON_FLAGS}"
+LDFLAGS="-Wl,-O2 -Wl,--as-needed -Wl,--strip-debug"
+
+AR="${CC}-ar"
+NM="${CC}-nm"
+RANLIB="${CC}-ranlib"
+AS="${CHOST}-as"
+STRIP="${CHOST}-strip"
+
+RUSTFLAGS="-C opt-level=3 -C target-cpu=native"
+CARGO_TARGET_x86_64_UNKNOWN_LINUX_GNU_RUSTFLAGS="${RUSTFLAGS}"

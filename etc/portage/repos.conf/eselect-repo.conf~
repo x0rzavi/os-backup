@@ -15,3 +15,7 @@ location = /var/db/repos/dm9pZCAq
 sync-type = git
 sync-uri = https://github.com/gentoo-mirror/dm9pZCAq.git
 
+[wayland-desktop]
+location = /var/db/repos/wayland-desktop
+sync-type = git
+sync-uri = https://github.com/gentoo-mirror/wayland-desktop.git

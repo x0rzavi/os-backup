@@ -1,4 +1,4 @@
-/boot/config-5.19.3-gentoo
+/boot/config-5.19.6-gentoo
 /etc/auto-cpufreq.conf
 /etc/cron.d/battery
 /etc/conf.d/zram-init

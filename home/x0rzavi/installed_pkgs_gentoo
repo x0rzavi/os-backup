@@ -15,6 +15,7 @@ app-containers/podman
 app-editors/nano
 app-editors/neovim
 app-eselect/eselect-repository
+app-eselect/eselect-ruby
 app-eselect/eselect-sh
 app-misc/byobu
 app-misc/neofetch
@@ -38,13 +39,14 @@ dev-util/ccache
 dev-util/git-delta
 dev-util/github-cli
 dev-vcs/git
+gnome-base/gnome-light
+gnome-extra/gnome-tweaks
 gnome-extra/gucharmap
 gui-apps/foot
 gui-apps/waybar
 gui-apps/wl-clipboard
 gui-apps/wlsunset
 gui-libs/xdg-desktop-portal-wlr
-gui-wm/newm
 media-sound/cava
 media-sound/playerctl
 media-video/libva-utils
