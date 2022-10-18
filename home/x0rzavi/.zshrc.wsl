@@ -1,1 +1,3 @@
+# Hack to openup ssh and gpg keys without intervention
 eval $(DISPLAY=:0 SSH_ASKPASS=/home/x0rzavi/.sshkey keychain --eval --quiet id_ed25519)
+printf 'hack' | gpg --clearsign --pinentry-mode loopback --passphrase-file=/home/x0rzavi/.gpgkey > /dev/null
