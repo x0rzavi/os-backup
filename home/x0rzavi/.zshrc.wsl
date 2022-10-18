@@ -1,1 +1,1 @@
-eval $(DISPLAY=:0 SSH_ASKPASS=/home/x0rzavi/.sshkey keychain --eval --agents ssh,gpg --quiet id_ed25519)
+eval $(DISPLAY=:0 SSH_ASKPASS=/home/x0rzavi/.sshkey keychain --eval --quiet id_ed25519)
