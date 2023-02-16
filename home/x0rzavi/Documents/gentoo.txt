@@ -12,7 +12,7 @@ zpool create -f -o ashift=12   \
       -O mountpoint=none    \
       -O xattr=sa           \
       -O normalization=formD  \
-      zroot /dev/disk/by-id/ata-TOSHIBA_MQ04ABF100_60KBP9C2T-part5
+      zroot /dev/disk/by-id/nvme-WD_Blue_SN570_500GB_22306Q457306-part5
 zfs create -u -o mountpoint=/ zroot/gentoo
 zfs create -u zroot/gentoo/home
 zfs create -u zroot/gentoo/root
@@ -27,7 +27,7 @@ zfs create -u -o canmount=off zroot/gentoo/var/lib
 zfs list -r -o name,canmount,mountpoint
 
 zpool export zroot
-zpool import -d /dev/disk/by-id/ata-TOSHIBA_MQ04ABF100_60KBP9C2T-part5 -N -R /mnt/gentoo zroot
+zpool import -d /dev/disk/by-id/nvme-WD_Blue_SN570_500GB_22306Q457306-part5 -N -R /mnt/gentoo zroot
 zfs mount -a
 zfs mount
 zpool set bootfs=zroot/gentoo zroot
@@ -35,7 +35,7 @@ zpool set bootfs=zroot/gentoo zroot
 mkfs.fat -F32 -n ESP /dev/sda1
 mkdir -p /mnt/gentoo/efi
 mkdir -p /mnt/gentoo/boot
-mount /dev/sda1 /mnt/gentoo/efi
+mount /dev/disk/by-id/nvme-WD_Blue_SN570_500GB_22306Q457306-part1 /mnt/gentoo/efi
 mkdir -p /mnt/gentoo/efi/EFI/Gentoo
 mount --bind /mnt/gentoo/efi/EFI/Gentoo /mnt/gentoo/boot
 
