@@ -1,5 +1,14 @@
 [INITIAL SETUP]
-zpool create -f -o ashift=12 -O acltype=posix -O atime=off -O compression=zstd -O dnodesize=auto -O xattr=sa -m none zroot /dev/disk/by-id/ata-TOSHIBA_MQ04ABF100_60KBP9C2T-part5
+zpool create -o ashift=12   \
+      -O acltype=posix      \
+      -O atime=off          \
+      -O canmount=off       \
+      -O compression=lz4    \
+      -O dnodesize=auto     \
+      -O mountpoint=none    \
+      -O xattr=sa           \
+      -O normalization=formD  \
+      -m none zroot /dev/disk/by-id/ata-TOSHIBA_MQ04ABF100_60KBP9C2T-part5
 zfs create -u -o mountpoint=none        zroot/root
 zfs create -u -o mountpoint=/           zroot/root/gentoo
 zfs create -u -o mountpoint=none -p     zroot/data/gentoo/var/lib
