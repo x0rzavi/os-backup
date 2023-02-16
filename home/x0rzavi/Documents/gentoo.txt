@@ -1,4 +1,8 @@
 [INITIAL SETUP]
+# zpool -m none & zpool -O mountpoint=none can be used interchangeably and hence either works
+# we keep altroot (-R) to be used at import time; altroot prepends path to always include a path
+# mountpoint is inheritable while canmount not
+# ZFS partition type is "Solaris Root (bf00)"
 zpool create -f -o ashift=12   \
       -O acltype=posix      \
       -O atime=off          \
@@ -8,19 +12,18 @@ zpool create -f -o ashift=12   \
       -O mountpoint=none    \
       -O xattr=sa           \
       -O normalization=formD  \
-      -m none zroot /dev/disk/by-id/ata-TOSHIBA_MQ04ABF100_60KBP9C2T-part5
-zfs create -u -o mountpoint=none        zroot/root
-zfs create -u -o mountpoint=/           zroot/root/gentoo
-zfs create -u -o mountpoint=none -p     zroot/data/gentoo/var/lib
-zfs create -u -o mountpoint=none        zroot/data/gentoo/usr
-zfs create -u -o mountpoint=/home       zroot/data/gentoo/home
-zfs create -u -o mountpoint=/home/x0rzavi/.local/share/containers zroot/data/gentoo/home/podman
-zfs create -u -o mountpoint=/root       zroot/data/gentoo/root
-zfs create -u -o mountpoint=/var/log    zroot/data/gentoo/var/log
-zfs create -u -o mountpoint=/var/tmp    zroot/data/gentoo/var/tmp
-zfs create -u -o mountpoint=/var/db     zroot/data/gentoo/var/db
-zfs create -u -o mountpoint=/var/cache  zroot/data/gentoo/var/cache
-zfs create -u -o mountpoint=/usr/src    zroot/data/gentoo/usr/src
+      zroot /dev/disk/by-id/ata-TOSHIBA_MQ04ABF100_60KBP9C2T-part5
+zfs create -u -o mountpoint=/ zroot/gentoo
+zfs create -u zroot/gentoo/home
+zfs create -u zroot/gentoo/root
+zfs create -u -o canmount=off zroot/gentoo/usr
+zfs create -u zroot/gentoo/usr/src
+zfs create -u -o canmount=off zroot/gentoo/var
+zfs create -u zroot/gentoo/var/log
+zfs create -u zroot/gentoo/var/tmp
+zfs create -u zroot/gentoo/var/db
+zfs create -u zroot/gentoo/var/cache
+zfs create -u -o canmount=off zroot/gentoo/var/lib
 zfs list -r -o name,canmount,mountpoint
 
 zpool export zroot
