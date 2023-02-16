@@ -30,7 +30,7 @@ zpool export zroot
 zpool import -d /dev/disk/by-id/ata-TOSHIBA_MQ04ABF100_60KBP9C2T-part5 -N -R /mnt/gentoo zroot
 zfs mount -a
 zfs mount
-zpool set bootfs=zroot/root/gentoo zroot
+zpool set bootfs=zroot/gentoo zroot
 
 mkfs.fat -F32 -n ESP /dev/sda1
 mkdir -p /mnt/gentoo/efi
