@@ -35,7 +35,7 @@ zpool set bootfs=zroot/gentoo zroot
 mkfs.fat -F32 -n ESP /dev/sda1
 mkdir -p /mnt/gentoo/efi
 mkdir -p /mnt/gentoo/boot
-mount /dev/disk/by-id/nvme-WD_Blue_SN570_500GB_22306Q457306-part1 /mnt/gentoo/efi
+mount /dev/nvme0n1p1 /mnt/gentoo/efi
 mkdir -p /mnt/gentoo/efi/EFI/Gentoo
 mount --bind /mnt/gentoo/efi/EFI/Gentoo /mnt/gentoo/boot
 
