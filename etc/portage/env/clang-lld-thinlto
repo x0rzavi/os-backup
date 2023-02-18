@@ -1,0 +1,4 @@
+# clang + lld + thinLTO
+
+LD="ld.lld"
+LDFLAGS="-fuse-ld=lld -rtlib=compiler-rt -unwindlib=libunwind -flto=thin -Wl,-O2 -Wl,--as-needed"
