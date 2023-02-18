@@ -1,0 +1,4 @@
+# clang + mold + noLTO
+
+COMMON_FLAGS="-march=native -O3 -pipe"
+LDFLAGS="-fuse-ld=mold -rtlib=compiler-rt -unwindlib=libunwind -Wl,-O2 -Wl,--as-needed"
