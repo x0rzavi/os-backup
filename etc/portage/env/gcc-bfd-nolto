@@ -1,4 +1,4 @@
-# gcc + noLTO + bfd
+# gcc + bfd + noLTO
 CC="gcc"
 CXX="g++"
 
