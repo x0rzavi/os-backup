@@ -2,12 +2,9 @@
 CC="gcc"
 CXX="g++"
 
-COMMON_FLAGS="-march=native -O3 -pipe"
-CFLAGS="${COMMON_FLAGS}"
-CXXFLAGS="${COMMON_FLAGS}"
-FCFLAGS="${COMMON_FLAGS}"
-FFLAGS="${COMMON_FLAGS}"
-LDFLAGS="-Wl,-O2 -Wl,--as-needed -Wl,--strip-debug"
+COMMON_FLAGS="-march=native -O3 -pipe -fomit-frame-pointer"
+LD="ld.bfd"
+LDFLAGS="-Wl,-O1 -Wl,--as-needed"
 
 AR="${CC}-ar"
 NM="${CC}-nm"
