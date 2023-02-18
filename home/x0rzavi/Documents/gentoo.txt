@@ -32,7 +32,7 @@ zfs mount -a
 zfs mount
 zpool set bootfs=zroot/gentoo zroot
 
-mkfs.fat -F32 -n ESP /dev/sda1
+mkfs.fat -F32 -n ESP /dev/nvme0n1p1
 mkdir -p /mnt/gentoo/efi
 mkdir -p /mnt/gentoo/boot
 mount /dev/nvme0n1p1 /mnt/gentoo/efi
@@ -75,23 +75,19 @@ rm -fr /mnt/gentoo
 zpool export zroot
 
 [POOL STRUCTURE]
-NAME                          USED  AVAIL  REFER  MOUNTPOINT
-zroot                        8.30G   558G    96K  none
-zroot/data                   5.98G   558G    96K  none
-zroot/data/gentoo            5.98G   558G    96K  none
-zroot/data/gentoo/home       1.53G   558G  1.49G  /home
-zroot/data/gentoo/home/podman  1.22M   555G  1.22M  /home/x0rzavi/.local/share/containers
-zroot/data/gentoo/root        616K   558G   452K  /root
-zroot/data/gentoo/usr         782M   558G    96K  none
-zroot/data/gentoo/usr/src     782M   558G   782M  /usr/src
-zroot/data/gentoo/var        3.69G   558G    96K  none
-zroot/data/gentoo/var/cache  2.67G   558G  2.67G  /var/cache
-zroot/data/gentoo/var/db     1.01G   558G  1.01G  /var/db
-zroot/data/gentoo/var/lib      96K   558G    96K  none
-zroot/data/gentoo/var/log    2.10M   558G  1.98M  /var/log
-zroot/data/gentoo/var/tmp     200K   558G   136K  /var/tmp
-zroot/root                   2.30G   558G    96K  none
-zroot/root/gentoo            2.30G   558G  2.30G  /
+NAME                     USED  AVAIL  REFER  MOUNTPOINT
+zroot                   4.94G   321G    96K  none
+zroot/gentoo            4.93G   321G  2.20G  /mnt/gentoo
+zroot/gentoo/home         96K   321G    96K  /mnt/gentoo/home
+zroot/gentoo/root        200K   321G   200K  /mnt/gentoo/root
+zroot/gentoo/usr         668M   321G    96K  /mnt/gentoo/usr
+zroot/gentoo/usr/src     668M   321G   668M  /mnt/gentoo/usr/src
+zroot/gentoo/var        2.08G   321G    96K  /mnt/gentoo/var
+zroot/gentoo/var/cache  1.29G   321G  1.29G  /mnt/gentoo/var/cache
+zroot/gentoo/var/db      806M   321G   806M  /mnt/gentoo/var/db
+zroot/gentoo/var/lib      96K   321G    96K  /mnt/gentoo/var/lib
+zroot/gentoo/var/log     200K   321G   200K  /mnt/gentoo/var/log
+zroot/gentoo/var/tmp     176K   321G   176K  /mnt/gentoo/var/tmp
 
 [KERNEL CONFIGURATION]
 [BASE]
@@ -100,12 +96,11 @@ Enable: [CONFIG_IKCONFIG] Kernel .config support
 Enable: [CONFIG_IKCONFIG_PROC] Enable access to .config through /proc/config.gz
 Disable: [CONFIG_X86_EXTENDED_PLATFORM] Support for extended (non-PC) x86 platforms
 Enable: [CONFIG_X86_AMD_PLATFORM_DEVICE] AMD ACPI2Platform devices support
-## Change: [CONFIG_MZEN] Processor family (AMD Zen)
+Change: [CONFIG_MZEN] Processor family (AMD Zen)
+Disable: [CONFIG_X86_MCE_INTEL] Intel MCE features
 Enable: [CONFIG_AMD_MEM_ENCRYPT] AMD Secure Memory Encryption (SME) support
 Change: [CONFIG_CPU_FREQ_DEFAULT_GOV_PERFORMANCE] Default CPUFreq governor (performance)
 Enable: [CONFIG_PARTITION_ADVANCED] Advanced partition selection
-Enable: [CONFIG_MSDOS_PARTITION] PC BIOS (MSDOS partition tables) support
-Enable: [CONFIG_EFI_PARTITION] EFI GUID Partition support
 Disable: [CONFIG_PCCARD] PCCard (PCMCIA/CardBus) support
 Disable: [CONFIG_MACINTOSH_DRIVERS] Macintosh device drivers
 Disable: [CONFIG_INPUT_JOYSTICK] Joysticks/Gamepads
@@ -114,6 +109,12 @@ Disable: [CONFIG_INPUT_TOUCHSCREEN] Touchscreens
 Disable: [CONFIG_INPUT_MISC] Miscellaneous devices
 Enable: [CONFIG_SENSORS_K10TEMP] AMD Family 10h+ temperature sensor [M]
 Enable: [CONFIG_CRYPTO_DEFLATE] Deflate compression algorithm
+
+[NVME]
+Enable: [CONFIG_BLK_DEV_NVME] NVM Express block device
+Enable: [CONFIG_NVME_MULTIPATH] NVMe multipath support
+Enable: [CONFIG_NVME_VERBOSE_ERRORS] NVMe verbose error reporting
+Enable: [CONFIG_NVME_HWMON] NVMe hardware monitoring
 
 [FS]
 Change: [CONFIG_EXT4_FS] The Extended 4 (ext4) filesystem [M]
@@ -135,7 +136,7 @@ Disable: [CONFIG_SND_USB] USB sound devices
 [NETWORK]
 Enable: [CONFIG_R8169] Realtek 8169/8168/8101/8125 ethernet support [ONLY][M]
 Enable: [CONFIG_USB_USBNET] Multi-purpose USB Networking Framework [ONLY][M]
-Enable: [CONFIG_USB_NET_RNDIS_HOST] Host for RNDIS and ActiveSync devices [ONLY][M]
+Enable: [CONFIG_USB_NET_RNDIS_HOST] Host for RNDIS and ActiveSync devices [M]
 Enable: [CONFIG_MT7601U] MediaTek MT7601U (USB) support [ONLY][M]
 Enable: [CONFIG_RTW88_8821CE] Realtek 8821CE PCI wireless network adapter [ONLY][M]
 
