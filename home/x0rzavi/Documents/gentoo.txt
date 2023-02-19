@@ -214,18 +214,18 @@ Enable: [CONFIG_I2C_HID_ACPI] HID over I2C transport layer ACPI driver [M]
 
 [IWD]
 Enable: [CONFIG_KEY_DH_OPERATIONS] Diffie-Hellman operations on retained keys
-Enable: [CONFIG_CRYPTO_ECB] ECB support 
-Enable: [CONFIG_CRYPTO_MD4] MD4 digest algorithm
-Enable: [CONFIG_CRYPTO_SHA1] SHA1 digest algorithm
-Enable: [CONFIG_CRYPTO_SHA1_SSSE3] SHA1 digest algorithm (SSSE3/AVX/AVX2/SHA-NI) 
-Enable: [CONFIG_CRYPTO_SHA256_SSSE3] SHA256 digest algorithm (SSSE3/AVX/AVX2/SHA-NI)
-Enable: [CONFIG_CRYPTO_SHA512_SSSE3] SHA512 digest algorithm (SSSE3/AVX/AVX2)
-Enable: [CONFIG_CRYPTO_AES_NI_INTEL] AES cipher algorithms (AES-NI)
-Enable: [CONFIG_CRYPTO_DES] DES and Triple DES EDE cipher algorithms
-Enable: [CONFIG_CRYPTO_DES3_EDE_X86_64] Triple DES EDE cipher algorithm (x86-64) 
-Enable: [CONFIG_CRYPTO_USER_API_HASH] User-space interface for hash algorithms
-Enable: [CONFIG_CRYPTO_ARC4] ARC4 cipher algorithm
-Enable: [CONFIG_CRYPTO_USER_API_SKCIPHER] User-space interface for symmetric key cipher algorithms   
+Enable: [CONFIG_CRYPTO_ECB] ECB (Electronic Codebook)
+Enable: [CONFIG_CRYPTO_MD4] MD4
+Enable: [CONFIG_CRYPTO_SHA1] SHA-1 
+Enable: [CONFIG_CRYPTO_SHA1_SSSE3] Hash functions: SHA-1 (SSSE3/AVX/AVX2/SHA-NI)
+Enable: [CONFIG_CRYPTO_SHA256_SSSE3] Hash functions: SHA-224 and SHA-256 (SSSE3/AVX/AVX2/SHA-NI)
+Enable: [CONFIG_CRYPTO_SHA512_SSSE3] Hash functions: SHA-384 and SHA-512 (SSSE3/AVX/AVX2)
+Enable: [CONFIG_CRYPTO_AES_NI_INTEL] Ciphers: AES, modes: ECB, CBC, CTS, CTR, XTR, XTS, GCM (AES-NI)
+Enable: [CONFIG_CRYPTO_DES] DES and Triple DES EDE
+Enable: [CONFIG_CRYPTO_DES3_EDE_X86_64] Ciphers: Triple DES EDE with modes: ECB, CBC
+Enable: [CONFIG_CRYPTO_USER_API_HASH] Hash algorithms
+Enable: [CONFIG_CRYPTO_ARC4] ARC4 (Alleged Rivest Cipher 4)
+Enable: [CONFIG_CRYPTO_USER_API_SKCIPHER] Symmetric key cipher algorithms  
 Enable: [CONFIG_PKCS8_PRIVATE_KEY_PARSER] PKCS#8 private key parser [M]
 
 [ZRAM]
