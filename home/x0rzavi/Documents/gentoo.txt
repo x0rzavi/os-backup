@@ -94,6 +94,7 @@ zroot/gentoo/var/tmp     176K   321G   176K  /mnt/gentoo/var/tmp
 Change: [CONFIG_KERNEL_LZ4] Kernel compression mode (LZ4)
 Enable: [CONFIG_IKCONFIG] Kernel .config support
 Enable: [CONFIG_IKCONFIG_PROC] Enable access to .config through /proc/config.gz
+Enable: [CONFIG_X86_X2APIC] Support x2apic
 Disable: [CONFIG_X86_EXTENDED_PLATFORM] Support for extended (non-PC) x86 platforms
 Enable: [CONFIG_X86_AMD_PLATFORM_DEVICE] AMD ACPI2Platform devices support
 Change: [CONFIG_MZEN] Processor family (AMD Zen)
@@ -101,12 +102,14 @@ Disable: [CONFIG_X86_MCE_INTEL] Intel MCE features
 Enable: [CONFIG_AMD_MEM_ENCRYPT] AMD Secure Memory Encryption (SME) support
 Change: [CONFIG_CPU_FREQ_DEFAULT_GOV_PERFORMANCE] Default CPUFreq governor (performance)
 Enable: [CONFIG_PARTITION_ADVANCED] Advanced partition selection
+Enable: [CONFIG_AMD_IOMMU_V2] AMD IOMMU Version 2 driver
 Disable: [CONFIG_PCCARD] PCCard (PCMCIA/CardBus) support
 Disable: [CONFIG_MACINTOSH_DRIVERS] Macintosh device drivers
 Disable: [CONFIG_INPUT_JOYSTICK] Joysticks/Gamepads
 Disable: [CONFIG_INPUT_TABLET] Tablets
 Disable: [CONFIG_INPUT_TOUCHSCREEN] Touchscreens 
 Disable: [CONFIG_INPUT_MISC] Miscellaneous devices
+Enable: [CONFIG_AMD_PMC] AMD SoC PMC driver
 Enable: [CONFIG_SENSORS_K10TEMP] AMD Family 10h+ temperature sensor [M]
 Enable: [CONFIG_CRYPTO_DEFLATE] Deflate compression algorithm
 
@@ -130,6 +133,8 @@ Disable: [CONFIG_DRM_I915] Intel 8xx/9xx/G3x/G4x/HD Graphics
 Disable: [CONFIG_DRM_VIRTIO_GPU] Virtio GPU driver
 Enable: [CONFIG_FB] Support for frame buffer devices
 Enable: [CONFIG_FB_EFI] EFI-based Framebuffer Support
+Enable: [CONFIG_SND_HDA_PATCH_LOADER] Support initialization patch loading for HD-audio
+Enable: [CONFIG_SND_HDA_CODEC_HDMI] Build HDMI/DisplayPort HD-audio codec support
 Enable: [CONFIG_SND_HDA_CODEC_REALTEK] Build Realtek HD-audio codec support 
 Disable: [CONFIG_SND_USB] USB sound devices
 
