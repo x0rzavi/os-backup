@@ -71,7 +71,7 @@ umount /mnt/gentoo/proc
 umount /mnt/gentoo/run
 umount -R /mnt/gentoo/sys
 zfs unmount -a
-rm -fr /mnt/gentoo
+# rm -fr /mnt/gentoo
 zpool export zroot
 
 [POOL STRUCTURE]
