@@ -237,7 +237,8 @@ Enable: [CONFIG_ZRAM] Compressed RAM block device support [M]
 Change: [ZRAM_DEF_COMP_ZSTD] Default zram compressor (zstd)
 Enable: [CONFIG_ZRAM_WRITEBACK] Write back incompressible or idle page to backing device
 Enable: [CONFIG_ZRAM_MEMORY_TRACKING] Track zRam block status
-Enable: [CONFIG_ZSMALLOC_STAT] Export zsmalloc statistics
+Enable: [CONFIG_ZRAM_MULTI_COMP] Enable multiple compression streams
+# Enable: [CONFIG_ZSMALLOC_STAT] Export zsmalloc statistics
 
 [NBFC]
 Enable: [CONFIG_ACPI_EC_DEBUGFS] EC read/write access through /sys/kernel/debug/ec [M]
