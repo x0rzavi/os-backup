@@ -1,0 +1,2 @@
+RUSTFLAGS="-C opt-level=3 -C target-cpu=native -C linker=clang -C link-arg=-fuse-ld=lld"
+CARGO_TARGET_x86_64_UNKNOWN_LINUX_GNU_RUSTFLAGS="${RUSTFLAGS}"

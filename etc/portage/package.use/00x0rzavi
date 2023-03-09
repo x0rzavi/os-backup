@@ -1,16 +1,13 @@
-sys-devel/clang default-compiler-rt default-lld llvm-libunwind
-sys-devel/gcc -lto -pgo
-
+sys-devel/clang-common default-compiler-rt default-lld llvm-libunwind
 sys-kernel/linux-firmware initramfs
 sys-kernel/gentoo-sources experimental
-
 media-libs/mesa video_cards_radeonsi
 x11-libs/libdrm video_cards_radeon
-media-video/pipewire extra jack-sdk pipewire-alsa sound-server
 media-libs/libsdl2 gles2
-sys-apps/irqbalance -numa
-sys-process/htop caps delayacct hwloc lm-sensors
+media-video/pipewire extra jack-sdk pipewire-alsa sound-server
 app-arch/p7zip -wxwidgets rar
-gui-apps/waybar mpd network wifi
-dev-lang/rust-bin rustfmt
+#net-wireless/iwd standalone
+gui-wm/hyprland grimblast
+media-libs/freetype utils
 virtual/rust rustfmt
+dev-lang/rust-bin rustfmt

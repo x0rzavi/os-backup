@@ -1,5 +1,9 @@
 # clang + lld + noLTO
 
 COMMON_FLAGS="-march=native -O3 -pipe"
+CFLAGS="${COMMON_FLAGS}"
+CXXFLAGS="${COMMON_FLAGS}"
+FCFLAGS="${COMMON_FLAGS}"
+FFLAGS="${COMMON_FLAGS}"
 LD="ld.lld"
 LDFLAGS="-fuse-ld=lld -rtlib=compiler-rt -unwindlib=libunwind -Wl,-O2 -Wl,--as-needed"

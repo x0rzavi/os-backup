@@ -1,4 +1,4 @@
-/boot/config-5.19.6-gentoo
+/boot/config-6.2.2-gentoo
 /etc/auto-cpufreq.conf
 /etc/cron.d/battery
 /etc/conf.d/zram-init
@@ -53,7 +53,6 @@
 /etc/udev/rules.d/01scheduler.rules
 /etc/vconsole.conf
 /home/x0rzavi/.config/docker/daemon.json
-/home/x0rzavi/.config/docker/key.json
 /home/x0rzavi/.config/pipewire/pipewire-pulse.conf.d/mopidy.conf
 /home/x0rzavi/Documents/gentoo.txt
 /home/x0rzavi/.zshrc.wsl

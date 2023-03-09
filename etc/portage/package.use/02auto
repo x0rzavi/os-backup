@@ -1,0 +1,8 @@
+# required by gui-wm/hyprland-0.21.0-r1::guru[X]
+# required by hyprland (argument)
+>=gui-libs/wlroots-0.16.2 x11-backend
+# required by sys-devel/clang-common-15.0.7-r3::gentoo[default-compiler-rt,llvm-libunwind]
+# required by sys-devel/clang-15.0.7-r1::gentoo
+# required by @selected
+# required by @world (argument)
+>=sys-libs/llvm-libunwind-15.0.7 static-libs
