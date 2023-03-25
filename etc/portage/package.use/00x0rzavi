@@ -11,3 +11,5 @@ gui-wm/hyprland grimblast
 media-libs/freetype utils
 virtual/rust rustfmt
 dev-lang/rust-bin rustfmt
+gui-apps/waybar mpd network wifi experimental
+gui-apps/rofi-wayland drun windowmode

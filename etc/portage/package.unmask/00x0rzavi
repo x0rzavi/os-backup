@@ -1,0 +1,4 @@
+=dev-qt/qtbase-6.4.3
+=dev-qt/qtwayland-6.4.3
+=dev-qt/qtdeclarative-6.4.3
+=dev-qt/qtshadertools-6.4.3

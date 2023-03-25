@@ -151,13 +151,20 @@ Enable: [CONFIG_CRYPTO_ECDSA] ECDSA (NIST P192, P256 etc.) algorithm [M]
 Enable: [CONFIG_CRYPTO_PCRYPT] Parallel crypto engine
 
 [NFTABLES]
-Enable: [CONFIG_NET_FOU] IP: Foo (IP protocols) over UDP
 Enable: [CONFIG_NETFILTER_ADVANCED] Advanced netfilter configuration
-Enable: [CONFIG_NETFILTER_XT_CONNMARK] ctmark target and match support [M]
-Enable: [CONFIG_NETFILTER_XT_MATCH_COMMENT] "comment" match support [M]
+Enable: [CONFIG_IP_VS] IP virtual server support [M]
 Enable: [CONFIG_NETFILTER_XT_MATCH_IPVS] "ipvs" match support [M]
-Enable: [CONFIG_NETFILTER_XT_MATCH_HASHLIMIT] "hashlimit" match support [M]
 Enable: [CONFIG_IP_NF_TARGET_REDIRECT] REDIRECT target support [M]
+Enable: [CONFIG_IP_VS_NFCT] Netfilter connection tracking
+Enable: [CONFIG_IP_VS_PROTO_TCP] TCP load balancing support
+Enable: [CONFIG_IP_VS_PROTO_UDP] UDP load balancing support
+Enable: [CONFIG_IP_VS_RR] round-robin scheduling [M]
+Enable: [CONFIG_NETFILTER_XT_MATCH_COMMENT] "comment" match support [M]
+Enable: [CONFIG_NETFILTER_XT_MATCH_MULTIPORT] "multiport" Multiple port match support [M]
+
+Enable: [CONFIG_NET_FOU] IP: Foo (IP protocols) over UDP
+Enable: [CONFIG_NETFILTER_XT_CONNMARK] ctmark target and match support [M]
+Enable: [CONFIG_NETFILTER_XT_MATCH_HASHLIMIT] "hashlimit" match support [M]
 Enable: [CONFIG_NF_CONNTRACK_MARK] Connection mark tracking support
 Enable: [CONFIG_NF_TABLES] Netfilter nf_tables support [M]
 Enable: [CONFIG_NF_TABLES_INET] Netfilter nf_tables mixed IPv4/IPv6 tables support
@@ -175,41 +182,39 @@ Enable: [CONFIG_IP6_NF_RAW] raw table support (required for TRACE) [M]
 Enable: [CONFIG_IP_NF_RAW] raw table support (required for NOTRACK/TRACE) [M]
 
 [PODMAN/DOCKER] [https://github.com/moby/moby/raw/master/contrib/check-config.sh]
-Enable: [CONFIG_BPF_SYSCALL] Enable bpf() system call
-Enable: [CONFIG_CGROUP_BPF] Support for eBPF programs attached to cgroups
-Enable: [CONFIG_CFS_BANDWIDTH] CPU bandwidth provisioning for FAIR_GROUP_SCHED
-Enable: [CONFIG_RT_GROUP_SCHED] Group scheduling for SCHED_RR/FIFO
-Enable: [CONFIG_BLK_DEV_THROTTLING] Block layer bio throttling support
-Enable: [CONFIG_TUN] Universal TUN/TAP device driver support [M]
-Enable: [CONFIG_BRIDGE] 802.1d Ethernet Bridging [M]
-Enable: [CONFIG_BRIDGE_NETFILTER] Bridged IP/ARP packets filtering [M]
-Enable: [CONFIG_VLAN_8021Q] 802.1Q/802.1ad VLAN Support [M]
-Enable: [CONFIG_BRIDGE_VLAN_FILTERING] VLAN filtering
-Enable: [CONFIG_FUSE_FS] FUSE (Filesystem in Userspace) support
-Enable: [CONFIG_OVERLAY_FS] Overlay filesystem support
 Enable: [CONFIG_MEMCG] Memory controller
 Enable: [CONFIG_VETH] Virtual ethernet pair device [M]
-Enable: [CONFIG_IP_VS] IP virtual server support [M]
-Enable: [CONFIG_IP_VS_PROTO_TCP] TCP load balancing support
-Enable: [CONFIG_IP_VS_PROTO_UDP] UDP load balancing support
-Enable: [CONFIG_IP_VS_NFCT] Netfilter connection tracking
-Enable: [CONFIG_IP_VS_RR] round-robin scheduling [M]
+Enable: [CONFIG_BRIDGE] 802.1d Ethernet Bridging [M]
+Enable: [CONFIG_BRIDGE_NETFILTER] Bridged IP/ARP packets filtering [M]
+Enable: [CONFIG_BPF_SYSCALL] Enable bpf() system call
+Enable: [CONFIG_CGROUP_BPF] Support for eBPF programs attached to cgroups
+Enable: [CONFIG_BLK_DEV_THROTTLING] Block layer bio throttling support
+Enable: [CONFIG_CFS_BANDWIDTH] CPU bandwidth provisioning for FAIR_GROUP_SCHED
+Enable: [CONFIG_RT_GROUP_SCHED] Group scheduling for SCHED_RR/FIFO
+Enable: [CONFIG_VXLAN] Virtual eXtensible Local Area Network (VXLAN) [M]
+Enable: [CONFIG_VLAN_8021Q] 802.1Q/802.1ad VLAN Support [M]
+Enable: [CONFIG_BRIDGE_VLAN_FILTERING] VLAN filtering
+Enable: [CONFIG_INET_ESP] IP: ESP transformation [M]
 Enable: [CONFIG_IPVLAN] IP-VLAN support [M]
 Enable: [CONFIG_MACVLAN] MAC-VLAN support [M]
 Enable: [CONFIG_DUMMY] Dummy net driver support [M]
-Enable: [CONFIG_VXLAN] Virtual eXtensible Local Area Network (VXLAN) [M]
+Enable: [CONFIG_OVERLAY_FS] Overlay filesystem support
+Enable: [CONFIG_TUN] Universal TUN/TAP device driver support [M]
+Enable: [CONFIG_FUSE_FS] FUSE (Filesystem in Userspace) support
 
 [KEYBOARD]
-Enable: [CONFIG_ACPI_WMI] WMI [M]
-Enable: [CONFIG_HP_WMI] HP WMI extras [M]
+Enable: [CONFIG_X86_PLATFORM_DRIVERS_HP] HP X86 Platform Specific Device Drivers
 Enable: [CONFIG_WIRELESS_HOTKEY] Wireless hotkey button [M]
 
 [TOUCHPAD]
 Enable: [CONFIG_I2C_PIIX4] Intel PIIX4 and compatible (ATI/AMD/Serverworks/Broadcom/SMSC) [M]
 Enable: [CONFIG_I2C_DESIGNWARE_PLATFORM] Synopsis Designware Platform [M]
 Enable: [CONFIG_I2C_DESIGNWARE_SLAVE] Synopsis Designware Slave
+Enable: [CONFIG_I2C_DESIGNWARE_AMDPSP] AMD PSP I2C semaphore support
 Enable: [CONFIG_PINCTRL_AMD] AMD GPIO pin control
 Enable: [CONFIG_HID_MULTITOUCH] HID Multitouch panels [ONLY][M]
+Enable: [CONFIG_HID_SENSOR_HUB] HID Sensors framework support [ONLY][M]
+Enable: [CONFIG_AMD_SFH_HID] AMD Sensor Fusion Hub [M]
 Enable: [CONFIG_I2C_HID_ACPI] HID over I2C transport layer ACPI driver [M]
 
 [IWD]

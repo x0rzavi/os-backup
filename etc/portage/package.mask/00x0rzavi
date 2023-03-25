@@ -1,2 +1,11 @@
 =gui-apps/grim-1.4.0-r2::gentoo
 sys-devel/gcc
+sys-devel/llvm
+sys-devel/clang
+sys-libs/compiler-rt
+sys-libs/llvm-libunwind
+sys-devel/lld
+sys-devel/llvm-common
+sys-devel/clang-common
+sys-libs/libomp
+sys-devel/llvmgold
