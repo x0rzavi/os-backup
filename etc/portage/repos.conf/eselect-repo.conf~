@@ -1,19 +1,19 @@
 # created by eselect-repo
 
-[x0rzavi]
-location = /var/db/repos/x0rzavi
+[gentoo]
+location = /var/db/repos/gentoo
 sync-type = git
-sync-uri = https://github.com/x0rzavi/x0rzavi-overlay.git
+sync-uri = https://github.com/gentoo-mirror/gentoo.git
 
 [guru]
 location = /var/db/repos/guru
 sync-type = git
 sync-uri = https://github.com/gentoo-mirror/guru.git
 
-[dm9pZCAq]
-location = /var/db/repos/dm9pZCAq
+[x0rzavi]
+location = /var/db/repos/x0rzavi
 sync-type = git
-sync-uri = https://github.com/gentoo-mirror/dm9pZCAq.git
+sync-uri = https://github.com/x0rzavi/x0rzavi-overlay.git
 
 [wayland-desktop]
 location = /var/db/repos/wayland-desktop

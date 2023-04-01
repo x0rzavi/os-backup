@@ -147,7 +147,7 @@ Enable: [CONFIG_RTW88_8821CE] Realtek 8821CE PCI wireless network adapter [ONLY]
 
 [WIREGUARD]
 Enable: [CONFIG_WIREGUARD] WireGuard secure network tunnel [M]
-Enable: [CONFIG_CRYPTO_ECDSA] ECDSA (NIST P192, P256 etc.) algorithm [M]
+# Enable: [CONFIG_CRYPTO_ECDSA] ECDSA (NIST P192, P256 etc.) algorithm [M]
 Enable: [CONFIG_CRYPTO_PCRYPT] Parallel crypto engine
 
 [NFTABLES]
@@ -161,9 +161,12 @@ Enable: [CONFIG_IP_VS_PROTO_UDP] UDP load balancing support
 Enable: [CONFIG_IP_VS_RR] round-robin scheduling [M]
 Enable: [CONFIG_NETFILTER_XT_MATCH_COMMENT] "comment" match support [M]
 Enable: [CONFIG_NETFILTER_XT_MATCH_MULTIPORT] "multiport" Multiple port match support [M]
+Enable: [CONFIG_IPV6_MULTIPLE_TABLES] IPv6: Multiple Routing Tables
+Enable: [CONFIG_NETFILTER_XT_CONNMARK] ctmark target and match support [M]
+Enable: [CONFIG_IP6_NF_RAW] raw table support (required for TRACE) [M]
+Enable: [CONFIG_IP_NF_RAW] raw table support (required for NOTRACK/TRACE) [M]
 
 Enable: [CONFIG_NET_FOU] IP: Foo (IP protocols) over UDP
-Enable: [CONFIG_NETFILTER_XT_CONNMARK] ctmark target and match support [M]
 Enable: [CONFIG_NETFILTER_XT_MATCH_HASHLIMIT] "hashlimit" match support [M]
 Enable: [CONFIG_NF_CONNTRACK_MARK] Connection mark tracking support
 Enable: [CONFIG_NF_TABLES] Netfilter nf_tables support [M]
@@ -177,9 +180,6 @@ Enable: [CONFIG_NFT_LOG] Netfilter nf_tables log module [M]
 Enable: [CONFIG_NFT_MASQ] Netfilter nf_tables masquerade support [M]
 Enable: [CONFIG_NFT_REDIR] Netfilter nf_tables redirect support [M]
 Enable: [CONFIG_NFT_NAT] Netfilter nf_tables nat module [M]
-Enable: [CONFIG_IPV6_MULTIPLE_TABLES] IPv6: Multiple Routing Tables
-Enable: [CONFIG_IP6_NF_RAW] raw table support (required for TRACE) [M]
-Enable: [CONFIG_IP_NF_RAW] raw table support (required for NOTRACK/TRACE) [M]
 
 [PODMAN/DOCKER] [https://github.com/moby/moby/raw/master/contrib/check-config.sh]
 Enable: [CONFIG_MEMCG] Memory controller
