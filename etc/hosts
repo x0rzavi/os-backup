@@ -35,3 +35,7 @@
 # from your network provider (if any) or from your regional registry (ARIN, 
 # APNIC, LACNIC, RIPE NCC, or AfriNIC.)
 #
+# Genshin logging servers (do not remove!)
+0.0.0.0 sg-public-data-api.hoyoverse.com
+0.0.0.0 log-upload-os.hoyoverse.com
+0.0.0.0 overseauspider.yuanshen.com

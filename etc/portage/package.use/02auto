@@ -10,3 +10,13 @@
 # required by xfce-base/thunar-4.18.4::gentoo[trash-panel-plugin]
 # required by thunar (argument)
 >=dev-libs/libdbusmenu-16.04.0-r2 gtk3
+# required by games-misc/an-anime-game-launcher-3.5.2::The-Anime-Game
+# required by games-misc/an-anime-game-launcher (argument)
+>=dev-util/xdelta-3.0.11-r1 lzma
+# required by app-benchmarks/phoronix-test-suite-9999::guru
+# required by app-benchmarks/phoronix-test-suite (argument)
+>=dev-lang/php-8.2.4 zip sockets gd truetype pcntl curl
+# required by gui-wm/swayfx-9999::x0rzavi[wallpapers]
+# required by @selected
+# required by @world (argument)
+>=gui-apps/swaybg-1.2.0 gdk-pixbuf

@@ -1,4 +1,10 @@
-=dev-qt/qtbase-6.4.3
-=dev-qt/qtwayland-6.4.3
-=dev-qt/qtdeclarative-6.4.3
-=dev-qt/qtshadertools-6.4.3
+dev-qt/qtwayland:6
+dev-qt/qtbase:6
+dev-qt/qtdeclarative:6
+dev-qt/qtshadertools:6
+
+# required by xdg-desktop-portal-hyprland (argument)
+# /var/db/repos/guru/profiles/package.mask:
+# Remigiusz Micielski <remigiusz.micielski@gmail.com>
+# depends on qtwayland:6 which is currently masked with all of qt6
+=gui-libs/xdg-desktop-portal-hyprland-0.3.1

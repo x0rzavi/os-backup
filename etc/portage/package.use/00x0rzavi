@@ -1,17 +1,27 @@
 sys-devel/clang-common default-compiler-rt default-lld llvm-libunwind
 sys-kernel/linux-firmware initramfs
 sys-kernel/gentoo-sources experimental
+
 media-libs/mesa video_cards_radeonsi
 x11-libs/libdrm video_cards_radeon
 media-libs/libsdl2 gles2
 media-video/pipewire extra jack-sdk pipewire-alsa sound-server
 app-arch/p7zip -wxwidgets rar
-#net-wireless/iwd standalone
-gui-wm/hyprland grimblast
 media-libs/freetype utils
-virtual/rust rustfmt
-dev-lang/rust-bin rustfmt
+# net-wireless/iwd standalone
+
+gui-wm/hyprland grimblast
 gui-apps/waybar mpd network wifi experimental
 gui-apps/rofi-wayland drun windowmode
 media-sound/mpd -udisks
 media-sound/ncmpcpp clock outputs visualizer
+media-video/obs-studio pipewire
+gui-wm/sway grimshot
+gui-wm/swayfx grimshot wallpapers
+
+virtual/rust rustfmt
+dev-lang/rust-bin rustfmt
+
+sys-kernel/cachyos-sources NUMAdisable lrng
+gui-wm/hyprland contrib
+gui-apps/hyprland-contrib grimblast

@@ -15,7 +15,9 @@ location = /var/db/repos/x0rzavi
 sync-type = git
 sync-uri = https://github.com/x0rzavi/x0rzavi-overlay.git
 
-[wayland-desktop]
-location = /var/db/repos/wayland-desktop
+
+
+[an-anime-team]
+location = /var/db/repos/an-anime-team
 sync-type = git
-sync-uri = https://github.com/gentoo-mirror/wayland-desktop.git
+sync-uri = https://github.com/an-anime-team/aagl-ebuilds.git

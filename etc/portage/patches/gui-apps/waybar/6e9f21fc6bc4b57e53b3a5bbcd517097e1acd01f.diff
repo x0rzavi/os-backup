@@ -1,0 +1,12 @@
+diff --git a/src/modules/hyprland/submap.cpp b/src/modules/hyprland/submap.cpp
+index 6eb0942d9..d61c8d415 100644
+--- a/src/modules/hyprland/submap.cpp
++++ b/src/modules/hyprland/submap.cpp
+@@ -19,6 +19,7 @@ Submap::Submap(const std::string& id, const Bar& bar, const Json::Value& config)
+ 
+   // register for hyprland ipc
+   gIPC->registerForIPC("submap", this);
++  dp.emit();
+ }
+ 
+ Submap::~Submap() {
