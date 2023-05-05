@@ -7,7 +7,7 @@ trap "exit" INT
 
 if [ "$(id -u)" -eq 0 ]
 then
-    rsync --recursive --relative --verbose --human-readable --ignore-missing-args --files-from="$(pwd)/path_list.txt" / "$(pwd)"
+    rsync --recursive --relative --verbose --human-readable --ignore-missing-args --include-from="$(pwd)/path_list.txt" / "$(pwd)"
     chown -hR x0rzavi:x0rzavi "$(pwd)"
     if [ -f /etc/pacman.conf ]; then
         paru -Q > "$(pwd)/home/x0rzavi/installed_pkgs_arch"

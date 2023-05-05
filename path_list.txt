@@ -1,60 +1,100 @@
-/boot/config-6.2.8-gentoo
-/etc/auto-cpufreq.conf
-/etc/cron.d/battery
-/etc/conf.d/zram-init
-/etc/conf.d/sysklogd
-/etc/containers/registries.conf
-/etc/default/earlyoom
-/etc/default/grub
-/etc/docker/daemon.json
-/etc/dracut.conf.d/00x0rzavi.conf
-/etc/elogind/logind.conf.d/00x0rzavi.conf
-/etc/fstab
-/etc/hosts
-/etc/issue
-/etc/locale.conf
-/etc/locale.gen
-/etc/makepkg.conf
-/etc/mkinitcpio.conf
-/etc/modprobe.d/nok10temp.conf
-/etc/modprobe.d/nowatchdog.conf
-/etc/modules-load.d/msr.conf
-/etc/mopidy/logging.conf
-/etc/mopidy/mopidy.conf
-/etc/nextdns.conf
-/etc/nohang/nohang-desktop.conf
-/etc/pacman.conf
-/etc/pacman.d/chaotic-mirrorlist
-/etc/pacman.d/mirrorlist
-/etc/pam.d/login
-/etc/paru.conf
-/etc/portage/env/
-/etc/portage/package.accept_keywords/
-/etc/portage/package.mask/
-/etc/portage/package.unmask/
-/etc/portage/package.use/
-/etc/portage/profile/
-/etc/portage/repos.conf/
-/etc/portage/make.conf
-/etc/portage/package.env
-/etc/rc.conf
-/etc/sanoid/sanoid.conf
-/etc/ssh/sshd_config
-/etc/sudoers.d/00wheel
-/etc/sudoers.d/01feedback
-/etc/sudoers.d/02gentoo
-/etc/sudoers.d/03psd
-/etc/sysctl.d/00vm.conf
-/etc/syslog.d/00x0rzavi.conf
-/etc/systemd/journald.conf.d/00size.conf
-/etc/systemd/system/nbfc_service.timer
-/etc/systemd/zram-generator.conf
-/etc/udev/rules.d/00hdparm.rules
-/etc/udev/rules.d/01scheduler.rules
-/etc/vconsole.conf
-/etc/zrepl/zrepl.yml
-/home/x0rzavi/.config/docker/daemon.json
-/home/x0rzavi/.config/pipewire/pipewire-pulse.conf.d/mopidy.conf
-/home/x0rzavi/Documents/gentoo.txt
-/home/x0rzavi/.zshrc.wsl
-/var/cache/ccache/ccache.conf
++ boot/
++ boot/config*
++ etc/
++ etc/auto-cpufreq.conf
++ etc/conf.d/
++ etc/conf.d/sysklogd
++ etc/conf.d/zram-init
++ etc/containers/
++ etc/containers/registries.conf
++ etc/cron.d/
++ etc/cron.d/battery
++ etc/default/
++ etc/default/earlyoom
++ etc/default/grub
++ etc/docker/
++ etc/docker/daemon.json
++ etc/dracut.conf.d/
++ etc/dracut.conf.d/00x0rzavi.conf
++ etc/elogind/
++ etc/elogind/logind.conf.d/
++ etc/elogind/logind.conf.d/00x0rzavi.conf
++ etc/fstab
++ etc/hosts
++ etc/issue
++ etc/locale.conf
++ etc/locale.gen
++ etc/makepkg.conf
++ etc/mkinitcpio.conf
++ etc/modprobe.d/
++ etc/modprobe.d/nok10temp.conf
++ etc/modprobe.d/nowatchdog.conf
++ etc/modules-load.d/
++ etc/modules-load.d/msr.conf
++ etc/mopidy/
++ etc/mopidy/logging.conf
++ etc/mopidy/mopidy.conf
++ etc/nextdns.conf
++ etc/nohang/
++ etc/nohang/nohang-desktop.conf
++ etc/pacman.conf
++ etc/pacman.d/
++ etc/pacman.d/chaotic-mirrorlist
++ etc/pacman.d/mirrorlist
++ etc/pam.d/
++ etc/pam.d/login
++ etc/paru.conf
++ etc/portage/
++ etc/portage/env/***
++ etc/portage/make.conf
++ etc/portage/package.accept_keywords/***
++ etc/portage/package.env
++ etc/portage/package.mask/***
++ etc/portage/package.unmask/***
++ etc/portage/package.use/***
++ etc/portage/patches/***
++ etc/portage/profile/***
++ etc/portage/repos.conf/***
++ etc/portage/sets/***
++ etc/rc.conf
++ etc/sanoid/
++ etc/sanoid/sanoid.conf
++ etc/ssh/
++ etc/ssh/sshd_config
++ etc/sudoers.d/
++ etc/sudoers.d/00wheel
++ etc/sudoers.d/01feedback
++ etc/sudoers.d/02gentoo
++ etc/sudoers.d/03psd
++ etc/sysctl.d/
++ etc/sysctl.d/00vm.conf
++ etc/syslog.d/00x0rzavi.conf
++ etc/systemd/
++ etc/systemd/journald.conf.d/
++ etc/systemd/journald.conf.d/00size.conf
++ etc/systemd/system/
++ etc/systemd/system/nbfc_service.timer
++ etc/systemd/zram-generator.conf
++ etc/udev/
++ etc/udev/rules.d/
++ etc/udev/rules.d/00hdparm.rules
++ etc/udev/rules.d/01scheduler.rules
++ etc/vconsole.conf
++ etc/zrepl/
++ etc/zrepl/zrepl.yml
++ home/
++ home/x0rzavi/
++ home/x0rzavi/.config/
++ home/x0rzavi/.config/docker/
++ home/x0rzavi/.config/docker/daemon.json
++ home/x0rzavi/.config/pipewire/
++ home/x0rzavi/.config/pipewire/pipewire-pulse.conf.d/
++ home/x0rzavi/.config/pipewire/pipewire-pulse.conf.d/mopidy.conf
++ home/x0rzavi/Documents/
++ home/x0rzavi/Documents/gentoo.txt
++ home/x0rzavi/.zshrc.wsl
++ var/
++ var/cache/
++ var/cache/ccache/
++ var/cache/ccache/ccache.conf
+- *
