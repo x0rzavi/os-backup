@@ -1,2 +1,3 @@
 #gui-wm/hyprland::wayland-desktop
 #gui-apps/hyprland-addons::wayland-desktop
+gui-apps/waylock::wayland-desktop

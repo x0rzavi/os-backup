@@ -16,6 +16,7 @@ app-editors/helix
 app-editors/nano
 app-editors/neovim
 app-editors/vscode
+app-emulation/quickemu
 app-eselect/eselect-repository
 app-misc/byobu
 app-misc/fastfetch
@@ -54,6 +55,7 @@ gui-apps/mako
 gui-apps/nwg-look
 gui-apps/rofi-wayland
 gui-apps/waybar
+gui-apps/waylock
 gui-apps/wev
 gui-apps/wl-clipboard
 gui-apps/wlsunset
@@ -61,6 +63,7 @@ gui-apps/wofi
 gui-libs/xdg-desktop-portal-hyprland
 gui-wm/hyprland
 gui-wm/swayfx
+media-gfx/gifsicle
 media-gfx/gimp
 media-gfx/imv
 media-sound/cava
@@ -85,19 +88,23 @@ net-misc/netifrc
 net-misc/rclone
 net-misc/wgcf
 net-misc/yt-dlp
+net-p2p/qbittorrent-enhanced
 net-vpn/wireguard-tools
 net-wireless/iwd
 sys-apps/bat
 sys-apps/bat-extras
 sys-apps/dust
+sys-apps/ethtool
 sys-apps/exa
 sys-apps/fd
 sys-apps/inxi
+sys-apps/irqbalance
 sys-apps/nvme-cli
 sys-apps/plocate
 sys-apps/procs
 sys-apps/ripgrep
 sys-apps/sd
+sys-apps/smartmontools
 sys-auth/rtkit
 sys-block/zram-init
 sys-boot/efibootmgr
@@ -129,6 +136,8 @@ sys-libs/compiler-rt:15.0.7
 sys-power/RyzenAdj
 sys-power/acpilight
 sys-power/nbfc-linux
+sys-power/powertop
+sys-power/tlp
 sys-process/bottom
 sys-process/btop
 sys-process/cronie
