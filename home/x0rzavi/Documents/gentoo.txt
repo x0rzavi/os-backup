@@ -24,6 +24,8 @@ zfs create -u zroot/gentoo/var/tmp
 zfs create -u zroot/gentoo/var/db
 zfs create -u zroot/gentoo/var/cache
 zfs create -u -o canmount=off zroot/gentoo/var/lib
+zfs create -u -o recordsize=64K -o mountpoint=/home/x0rzavi/VM zroot/gentoo/home/vm
+chown -R x0rzavi:x0rzavi /home/x0rzavi/VM
 zfs list -r -o name,canmount,mountpoint
 
 zpool export zroot

@@ -1,14 +1,14 @@
-sys-devel/gcc
-net-libs/nodejs
+# sys-devel/clang:15
+# sys-devel/llvm:15
 
-sys-libs/compiler-rt
-sys-devel/lld
-sys-devel/clang-runtime
 sys-devel/clang
+sys-devel/clang-common
+sys-devel/clang-runtime
 sys-devel/llvm
 sys-devel/llvm-common
-sys-devel/clang-common
-sys-libs/libomp
 sys-libs/llvm-libunwind
-
-gui-wm/hyprland::x0rzavi
+sys-libs/compiler-rt
+sys-libs/compiler-rt-sanitizers
+sys-devel/lld
+sys-libs/libomp
+sys-devel/gcc

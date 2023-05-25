@@ -20,10 +20,16 @@
 # required by @selected
 # required by @world (argument)
 >=gui-apps/swaybg-1.2.0 gdk-pixbuf
-# required by app-emulation/quickemu-4.7::x0rzavi
-# required by quickemu (argument)
->=app-emulation/qemu-7.2.0-r3 spice
 # required by app-crypt/swtpm-0.8.0::gentoo[gnutls]
 # required by app-emulation/quickemu-4.7::x0rzavi
 # required by quickemu (argument)
 >=net-libs/gnutls-3.8.0 tools pkcs11
+# required by app-emulation/quickemu-4.7::x0rzavi
+# required by quickemu (argument)
+>=app-emulation/qemu-8.0.0-r1 spice usbredir virtfs
+# required by app-emulation/quickemu-4.7::x0rzavi
+# required by quickemu (argument)
+>=net-misc/spice-gtk-0.42 smartcard usbredir
+# required by app-emulation/quickemu-4.7::x0rzavi
+# required by quickemu (argument)
+>=app-emulation/spice-0.15.1-r1 smartcard

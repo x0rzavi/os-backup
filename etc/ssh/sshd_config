@@ -54,7 +54,7 @@
 #IgnoreRhosts yes
 
 # To disable tunneled clear text passwords, change to no here!
-PasswordAuthentication no
+#PasswordAuthentication yes
 #PermitEmptyPasswords no
 
 # Change to no to disable s/key passwords
@@ -79,7 +79,7 @@ PasswordAuthentication no
 # If you just want the PAM account and session checks to run without
 # PAM authentication, then enable this but set PasswordAuthentication
 # and KbdInteractiveAuthentication to 'no'.
-UsePAM yes
+#UsePAM no
 
 #AllowAgentForwarding yes
 #AllowTcpForwarding yes
@@ -88,8 +88,8 @@ UsePAM yes
 #X11DisplayOffset 10
 #X11UseLocalhost yes
 #PermitTTY yes
-PrintMotd no
-PrintLastLog no
+#PrintMotd yes
+#PrintLastLog yes
 #TCPKeepAlive yes
 #PermitUserEnvironment no
 #Compression delayed
@@ -114,9 +114,4 @@ Subsystem	sftp	/usr/lib64/misc/sftp-server
 #	AllowTcpForwarding no
 #	PermitTTY no
 #	ForceCommand cvs server
-
-# Allow client to pass locale environment variables. #367017
-AcceptEnv LANG LC_ALL LC_COLLATE LC_CTYPE LC_MESSAGES LC_MONETARY LC_NUMERIC LC_TIME LANGUAGE LC_ADDRESS LC_IDENTIFICATION LC_MEASUREMENT LC_NAME LC_PAPER LC_TELEPHONE
-
-# Allow client to pass COLORTERM to match TERM. #658540
-AcceptEnv COLORTERM
+Include "/etc/ssh/sshd_config.d/*.conf"
