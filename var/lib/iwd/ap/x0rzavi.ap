@@ -1,0 +1,11 @@
+# [General]
+# Channel=36
+
+[Security]
+Passphrase=R3tr0w0lfavi=1229
+
+[IPv4]
+Address=192.168.250.1
+Gateway=192.168.250.1
+Netmask=255.255.255.0
+DNSList=1.1.1.1

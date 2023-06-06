@@ -12,6 +12,7 @@
 + etc/default/
 + etc/default/earlyoom
 + etc/default/grub
++ etc/dhcpcd.conf
 + etc/docker/
 + etc/docker/daemon.json
 + etc/dracut.conf.d/
@@ -97,4 +98,8 @@
 + var/cache/
 + var/cache/ccache/
 + var/cache/ccache/ccache.conf
++ var/lib/
++ var/lib/iwd/
++ var/lib/iwd/ap/
++ var/lib/iwd/ap/x0rzavi.ap
 - *
