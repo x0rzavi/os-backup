@@ -23,6 +23,8 @@
 + etc/fstab
 + etc/hosts
 + etc/issue
++ etc/iwd/
++ etc/iwd/main.conf
 + etc/locale.conf
 + etc/locale.gen
 + etc/makepkg.conf
