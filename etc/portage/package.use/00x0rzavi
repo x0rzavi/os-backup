@@ -8,6 +8,7 @@ media-video/pipewire extra jack-sdk pipewire-alsa sound-server
 app-arch/p7zip -wxwidgets rar
 media-libs/freetype utils
 app-emulation/qemu smartcard virgl
+sys-apps/systemd-utils boot
 # net-wireless/iwd standalone
 
 gui-wm/hyprland grimblast

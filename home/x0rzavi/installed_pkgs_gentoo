@@ -3,6 +3,7 @@ app-admin/chezmoi
 app-admin/entr
 app-admin/sudo
 app-admin/sysklogd
+app-admin/zenmonitor3
 app-arch/lz4
 app-arch/p7zip
 app-arch/zip
@@ -10,6 +11,8 @@ app-containers/aardvark-dns
 app-containers/distrobox
 app-containers/netavark
 app-containers/podman
+app-crypt/efitools
+app-crypt/sbsigntools
 app-crypt/seahorse
 app-editors/nano
 app-editors/neovim
@@ -22,6 +25,7 @@ app-misc/nnn
 app-misc/nwg-look
 app-misc/pfetch-rs
 app-misc/radeontop
+app-mobilephone/scrcpy
 app-office/obsidian
 app-portage/emlop
 app-portage/gentoolkit
@@ -95,19 +99,21 @@ sys-apps/bat-extras
 sys-apps/dust
 sys-apps/exa
 sys-apps/fd
+sys-apps/flatpak
 sys-apps/gptfdisk
 sys-apps/inxi
 sys-apps/memtester
 sys-apps/nvme-cli
 sys-apps/plocate
-sys-apps/procs
 sys-apps/ripgrep
 sys-apps/sd
 sys-auth/rtkit
 sys-block/zram-init
 sys-boot/efibootmgr
+sys-boot/mokutil
 sys-boot/plymouth
 sys-boot/plymouth-openrc-plugin
+sys-boot/shim
 sys-devel/clang
 sys-devel/clang-runtime:15.0.7
 sys-devel/clang-toolchain-symlinks:15
@@ -127,6 +133,7 @@ sys-fs/genfstab
 sys-fs/zfs
 sys-fs/zfs-kmod
 sys-fs/zrepl
+sys-kernel/cachyos-sources
 sys-kernel/dracut
 sys-kernel/gentoo-sources
 sys-kernel/linux-firmware
@@ -144,6 +151,7 @@ sys-process/btop
 sys-process/cronie
 sys-process/htop
 sys-process/iotop
+sys-process/procs
 www-client/carbonyl-bin
 www-client/firefox-bin
 x11-apps/mesa-progs
