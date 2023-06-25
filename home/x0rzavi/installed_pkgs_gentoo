@@ -111,8 +111,6 @@ sys-auth/rtkit
 sys-block/zram-init
 sys-boot/efibootmgr
 sys-boot/mokutil
-sys-boot/plymouth
-sys-boot/plymouth-openrc-plugin
 sys-boot/shim
 sys-devel/clang
 sys-devel/clang-runtime:15.0.7

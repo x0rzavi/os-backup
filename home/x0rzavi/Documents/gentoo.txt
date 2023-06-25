@@ -25,7 +25,8 @@ zfs create -u zroot/gentoo/var/db
 zfs create -u zroot/gentoo/var/cache
 zfs create -u -o canmount=off zroot/gentoo/var/lib
 zfs create -u -o recordsize=64K -o mountpoint=/home/x0rzavi/VM zroot/gentoo/home/vm
-chown -R x0rzavi:x0rzavi /home/x0rzavi/VM
+zfs create -u -o recordsize=1M -o mountpoint=/home/x0rzavi/Games zroot/gentoo/home/games
+chown -R x0rzavi:x0rzavi /home/x0rzavi/VM /home/x0rzavi/Games
 zfs list -r -o name,canmount,mountpoint
 
 zpool export zroot
@@ -77,19 +78,21 @@ zfs unmount -a
 zpool export zroot
 
 [POOL STRUCTURE]
-NAME                     USED  AVAIL  REFER  MOUNTPOINT
-zroot                   4.94G   321G    96K  none
-zroot/gentoo            4.93G   321G  2.20G  /mnt/gentoo
-zroot/gentoo/home         96K   321G    96K  /mnt/gentoo/home
-zroot/gentoo/root        200K   321G   200K  /mnt/gentoo/root
-zroot/gentoo/usr         668M   321G    96K  /mnt/gentoo/usr
-zroot/gentoo/usr/src     668M   321G   668M  /mnt/gentoo/usr/src
-zroot/gentoo/var        2.08G   321G    96K  /mnt/gentoo/var
-zroot/gentoo/var/cache  1.29G   321G  1.29G  /mnt/gentoo/var/cache
-zroot/gentoo/var/db      806M   321G   806M  /mnt/gentoo/var/db
-zroot/gentoo/var/lib      96K   321G    96K  /mnt/gentoo/var/lib
-zroot/gentoo/var/log     200K   321G   200K  /mnt/gentoo/var/log
-zroot/gentoo/var/tmp     176K   321G   176K  /mnt/gentoo/var/tmp
+NAME                      USED  AVAIL  REFER  MOUNTPOINT
+zroot                    98.3G   227G    96K  none
+zroot/gentoo             98.2G   227G  8.28G  /
+zroot/gentoo/home        73.9G   227G  67.4G  /home
+zroot/gentoo/home/games  6.54G   227G  6.54G  /home/x0rzavi/Games
+zroot/gentoo/home/vm       96K   227G    96K  /home/x0rzavi/VM
+zroot/gentoo/root         856K   227G   856K  /root
+zroot/gentoo/usr         10.4G   227G    96K  /usr
+zroot/gentoo/usr/src     10.4G   227G  10.4G  /usr/src
+zroot/gentoo/var         5.65G   227G    96K  /var
+zroot/gentoo/var/cache   4.25G   227G  4.25G  /var/cache
+zroot/gentoo/var/db      1.38G   227G  1.38G  /var/db
+zroot/gentoo/var/lib       96K   227G    96K  /var/lib
+zroot/gentoo/var/log     15.9M   227G  15.9M  /var/log
+zroot/gentoo/var/tmp      208K   227G   208K  /var/tmp
 
 [KERNEL CONFIGURATION]
 [BASE]
@@ -245,7 +248,6 @@ Change: [ZRAM_DEF_COMP_ZSTD] Default zram compressor (zstd)
 Enable: [CONFIG_ZRAM_WRITEBACK] Write back incompressible or idle page to backing device
 Enable: [CONFIG_ZRAM_MEMORY_TRACKING] Track zRam block status
 Enable: [CONFIG_ZRAM_MULTI_COMP] Enable multiple compression streams
-# Enable: [CONFIG_ZSMALLOC_STAT] Export zsmalloc statistics
 
 [KVM]
 Enable: [CONFIG_KVM] Kernel-based Virtual Machine (KVM) support [M]
