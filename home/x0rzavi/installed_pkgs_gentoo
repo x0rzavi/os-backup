@@ -14,6 +14,7 @@ app-containers/podman
 app-crypt/efitools
 app-crypt/sbsigntools
 app-crypt/seahorse
+app-crypt/veracrypt
 app-editors/nano
 app-editors/neovim
 app-editors/vscode
@@ -112,6 +113,7 @@ sys-block/zram-init
 sys-boot/efibootmgr
 sys-boot/mokutil
 sys-boot/shim
+sys-boot/zfsbootmenu
 sys-devel/clang
 sys-devel/clang-runtime:15.0.7
 sys-devel/clang-toolchain-symlinks:15

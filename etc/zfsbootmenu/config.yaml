@@ -1,0 +1,13 @@
+Global:
+  ManageImages: true
+  BootMountPoint: /efi
+Components:
+  ImageDir: /efi/EFI/zbm
+  Enabled: false
+EFI:
+  ImageDir: /efi/EFI/zbm
+  Versions: false
+  Enabled: true
+Kernel:
+  CommandLine: ro quiet loglevel=0
+  Prefix: grubx64
