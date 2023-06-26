@@ -85,6 +85,8 @@
 + etc/vconsole.conf
 + etc/zfsbootmenu/
 + etc/zfsbootmenu/config.yaml
++ etc/zfsbootmenu/generate-zbm.post.d/
++ etc/zfsbootmenu/generate-zbm.post.d/sign.sh
 + etc/zrepl/
 + etc/zrepl/zrepl.yml
 + home/

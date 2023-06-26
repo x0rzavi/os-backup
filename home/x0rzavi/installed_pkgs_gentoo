@@ -14,7 +14,6 @@ app-containers/podman
 app-crypt/efitools
 app-crypt/sbsigntools
 app-crypt/seahorse
-app-crypt/veracrypt
 app-editors/nano
 app-editors/neovim
 app-editors/vscode

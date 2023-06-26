@@ -1,6 +1,7 @@
 Global:
   ManageImages: true
   BootMountPoint: /efi
+  PostHooksDir: /etc/zfsbootmenu/generate-zbm.post.d
 Components:
   ImageDir: /efi/EFI/zbm
   Enabled: false
