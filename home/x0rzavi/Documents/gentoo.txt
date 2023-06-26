@@ -264,3 +264,7 @@ Disable: [CONFIG_SENSORS_K10TEMP] AMD Family 10h+ temperature sensor [M]
 
 [POWERTOP]
 Enable: [CONFIG_CPU_FREQ_STAT] CPU frequency transition statistics
+
+[KEXEC]/ZFSBootMenu
+Enable: [CONFIG_KEXEC_FILE] kexec file based system call
+Enable: [CONFIG_KEXEC_SIG] Verify kernel signature during kexec_file_load() syscall
