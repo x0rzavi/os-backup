@@ -237,6 +237,8 @@ Enable: [CONFIG_CRYPTO_USER_API_HASH] Hash algorithms
 Enable: [CONFIG_CRYPTO_ARC4] ARC4 (Alleged Rivest Cipher 4)
 Enable: [CONFIG_CRYPTO_USER_API_SKCIPHER] Symmetric key cipher algorithms  
 Enable: [CONFIG_PKCS8_PRIVATE_KEY_PARSER] PKCS#8 private key parser [M]
+Enable: [CONFIG_EXTRA_FIRMWARE] Build named firmware blobs into the kernel
+binary [regulatory.db regulatory.db.p7s]
 
 [ZRAM]
 Enable: [CONFIG_CRYPTO_LZO] LZO compression algorithm

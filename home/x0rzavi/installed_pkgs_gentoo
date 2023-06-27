@@ -65,6 +65,7 @@ gui-apps/wofi
 gui-libs/xdg-desktop-portal-hyprland
 gui-wm/hyprland
 gui-wm/hyprland-contrib
+media-fonts/terminus-font
 media-fonts/tex-gyre
 media-gfx/gimp
 media-gfx/imv

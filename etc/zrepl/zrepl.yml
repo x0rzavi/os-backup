@@ -13,4 +13,7 @@ jobs:
       - type: grid
         # grid: 1x1h(keep=all) | 24x1h | 35x1d | 6x30d
         grid: 6x1h | 3x1d
-        regex: "^zrepl_"
+        regex: "^zrepl_.*"
+      - type: last_n
+        count: 2
+        regex: "^manual_.*"

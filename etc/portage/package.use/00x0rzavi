@@ -23,6 +23,6 @@ gui-wm/swayfx grimshot wallpapers
 virtual/rust rustfmt
 dev-lang/rust-bin rustfmt
 
-sys-kernel/cachyos-sources NUMAdisable lrng
+# sys-kernel/cachyos-sources NUMAdisable lrng
 # gui-wm/hyprland contrib
 # gui-apps/hyprland-contrib grimblast
