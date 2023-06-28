@@ -10,5 +10,5 @@ EFI:
   Versions: false
   Enabled: true
 Kernel:
-  CommandLine: ro quiet loglevel=0
+  CommandLine: ro quiet loglevel=0 rd.udev.log_level=3 rd.vconsole.font=ter-v20b
   Prefix: grubx64
